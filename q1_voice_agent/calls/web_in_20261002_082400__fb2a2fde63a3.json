@@ -1,0 +1,178 @@
+{
+  "call_id": "fb2a2fde63a3",
+  "label": "web_in_20261002_082400",
+  "model": "openai/gpt-oss-120b",
+  "language": "en",
+  "started_at": "2026-10-02T08:21:37.741118+00:00",
+  "summary": {
+    "call_id": "fb2a2fde63a3",
+    "started_at": "2026-10-02T08:21:37.741118+00:00",
+    "lead": {},
+    "handoff": null,
+    "callback": null,
+    "kb_searches": 0,
+    "grounded_answers": 0,
+    "refusals": 0,
+    "grounding_rate": null
+  },
+  "kb_searches": [],
+  "transcript": [
+    {
+      "role": "agent",
+      "text": "Hi, I\u2019m Meera calling from Niva\u202fBupa. I\u2019d like to see if we can help you with health\u2011insurance options\u2014 is now a good time to talk?",
+      "at": "2026-10-02T08:21:39.510312+00:00",
+      "tool_calls": [],
+      "timings_ms": {
+        "llm_0": 1744.1,
+        "turn_total": 1744.2
+      }
+    },
+    {
+      "role": "caller",
+      "text": "Yes, no, it's fine.",
+      "at": "2026-10-02T08:21:55.959098+00:00",
+      "tool_calls": [],
+      "timings_ms": {}
+    },
+    {
+      "role": "agent",
+      "text": "Great! May I have your name, please?",
+      "at": "2026-10-02T08:21:56.675886+00:00",
+      "tool_calls": [],
+      "timings_ms": {
+        "llm_0": 716.7,
+        "turn_total": 716.7
+      }
+    },
+    {
+      "role": "caller",
+      "text": "this show.",
+      "at": "2026-10-02T08:22:04.665454+00:00",
+      "tool_calls": [],
+      "timings_ms": {}
+    },
+    {
+      "role": "agent",
+      "text": "Sure, could you tell me your name so I can address you properly?",
+      "at": "2026-10-02T08:22:05.482729+00:00",
+      "tool_calls": [],
+      "timings_ms": {
+        "llm_0": 817.2,
+        "turn_total": 817.2
+      }
+    },
+    {
+      "role": "caller",
+      "text": "Sam",
+      "at": "2026-10-02T08:22:13.572185+00:00",
+      "tool_calls": [],
+      "timings_ms": {}
+    },
+    {
+      "role": "agent",
+      "text": "Thanks, Sam. What prompted you to look into health\u2011insurance coverage today?",
+      "at": "2026-10-02T08:22:14.594651+00:00",
+      "tool_calls": [],
+      "timings_ms": {
+        "llm_0": 1022.3,
+        "turn_total": 1022.4
+      }
+    },
+    {
+      "role": "caller",
+      "text": "I just wanted to buy one.",
+      "at": "2026-10-02T08:22:31.492634+00:00",
+      "tool_calls": [],
+      "timings_ms": {}
+    },
+    {
+      "role": "agent",
+      "text": "Got it. Who are you looking to cover and how many people would that be?",
+      "at": "2026-10-02T08:22:40.501922+00:00",
+      "tool_calls": [],
+      "timings_ms": {
+        "throttle_wait_0": 8267.6,
+        "llm_0": 740.9,
+        "turn_total": 9009.2
+      }
+    },
+    {
+      "role": "caller",
+      "text": "me and my wife.",
+      "at": "2026-10-02T08:22:51.966283+00:00",
+      "tool_calls": [],
+      "timings_ms": {}
+    },
+    {
+      "role": "agent",
+      "text": "What's the age of the older of the two of you?......And which city do you reside in?",
+      "at": "2026-10-02T08:22:58.117833+00:00",
+      "tool_calls": [],
+      "timings_ms": {
+        "throttle_wait_0": 4959.5,
+        "llm_0": 1191.3,
+        "turn_total": 6151.5
+      }
+    },
+    {
+      "role": "caller",
+      "text": "I am 25",
+      "at": "2026-10-02T08:23:11.325816+00:00",
+      "tool_calls": [],
+      "timings_ms": {}
+    },
+    {
+      "role": "agent",
+      "text": "Sorry about that\u2014just the city, please?",
+      "at": "2026-10-02T08:23:12.043793+00:00",
+      "tool_calls": [],
+      "timings_ms": {
+        "llm_0": 717.8,
+        "turn_total": 717.9
+      }
+    },
+    {
+      "role": "caller",
+      "text": "and I live in Delhi.",
+      "at": "2026-10-02T08:23:13.783180+00:00",
+      "tool_calls": [],
+      "timings_ms": {}
+    },
+    {
+      "role": "agent",
+      "text": "Do you have any pre\u2011existing health conditions we should note?",
+      "at": "2026-10-02T08:23:15.420220+00:00",
+      "tool_calls": [],
+      "timings_ms": {
+        "throttle_wait_0": 1061.4,
+        "llm_0": 575.4,
+        "turn_total": 1637.0
+      }
+    },
+    {
+      "role": "caller",
+      "text": "No.",
+      "at": "2026-10-02T08:23:24.944817+00:00",
+      "tool_calls": [],
+      "timings_ms": {}
+    },
+    {
+      "role": "agent",
+      "text": "Are you currently holding any health\u2011insurance cover, perhaps through your employer or another policy?",
+      "at": "2026-10-02T08:23:41.635093+00:00",
+      "tool_calls": [],
+      "timings_ms": {
+        "throttle_wait_0": 15807.0,
+        "llm_0": 882.5,
+        "turn_total": 16690.2
+      }
+    },
+    {
+      "role": "caller",
+      "text": "No, I don't.",
+      "at": "2026-10-02T08:23:54.319903+00:00",
+      "tool_calls": [],
+      "timings_ms": {}
+    }
+  ]
+}

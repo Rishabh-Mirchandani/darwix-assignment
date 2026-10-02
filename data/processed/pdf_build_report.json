@@ -1,0 +1,20 @@
+{
+  "pdfs": 5,
+  "pages": 159,
+  "sections": 302,
+  "chunks_produced": 411,
+  "dropped_low_information": 3,
+  "exact_duplicates": 19,
+  "near_duplicates": 34,
+  "records_final": 358,
+  "records_with_pii": 4,
+  "by_category": {
+    "coverage_rule": 299,
+    "eligibility_rule": 59
+  },
+  "by_section_kind": {
+    "prose": 281,
+    "table": 77
+  },
+  "warnings": []
+}

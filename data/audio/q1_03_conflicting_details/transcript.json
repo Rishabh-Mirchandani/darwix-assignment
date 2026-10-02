@@ -1,0 +1,143 @@
+{
+  "label": "03_conflicting_details",
+  "market": "in",
+  "voices": {
+    "agent": "en-IN-NeerjaNeural",
+    "caller": "en-IN-PrabhatNeural"
+  },
+  "source_transcript": "03_conflicting_details__68f87603dbb8.json",
+  "model": "qwen/qwen3.8-27b",
+  "summary": {
+    "call_id": "68f87603dbb8",
+    "started_at": "2026-10-02T06:35:03.805990+00:00",
+    "lead": {},
+    "handoff": null,
+    "callback": null,
+    "kb_searches": 0,
+    "grounded_answers": 0,
+    "refusals": 0,
+    "grounding_rate": null
+  },
+  "turns": [
+    {
+      "index": 0,
+      "file": "000_agent.mp3",
+      "speaker": "agent",
+      "voice": "en-IN-NeerjaNeural",
+      "text": "Hi, this is Meera from Niva Bupa. I'm calling to see if you'd like to explore health cover options for you or your family — is now a good time for a quick chat?",
+      "bytes": 71136
+    },
+    {
+      "index": 1,
+      "file": "001_caller.mp3",
+      "speaker": "caller",
+      "voice": "en-IN-PrabhatNeural",
+      "text": "Sure.",
+      "bytes": 11232
+    },
+    {
+      "index": 2,
+      "file": "002_agent.mp3",
+      "speaker": "agent",
+      "voice": "en-IN-NeerjaNeural",
+      "text": "Great. To start, who are you looking to get cover for — just yourself, or your family?",
+      "bytes": 46512
+    },
+    {
+      "index": 3,
+      "file": "003_caller.mp3",
+      "speaker": "caller",
+      "voice": "en-IN-PrabhatNeural",
+      "text": "It's just for myself.",
+      "bytes": 14976
+    },
+    {
+      "index": 4,
+      "file": "004_agent.mp3",
+      "speaker": "agent",
+      "voice": "en-IN-NeerjaNeural",
+      "text": "Got it, just for yourself. How old are you?",
+      "bytes": 29520
+    },
+    {
+      "index": 5,
+      "file": "005_caller.mp3",
+      "speaker": "caller",
+      "voice": "en-IN-PrabhatNeural",
+      "text": "I'm 35.",
+      "bytes": 11664
+    },
+    {
+      "index": 6,
+      "file": "006_agent.mp3",
+      "speaker": "agent",
+      "voice": "en-IN-NeerjaNeural",
+      "text": "Thanks. Which city do you live in?",
+      "bytes": 23616
+    },
+    {
+      "index": 7,
+      "file": "007_caller.mp3",
+      "speaker": "caller",
+      "voice": "en-IN-PrabhatNeural",
+      "text": "Actually hang on, add my wife too.",
+      "bytes": 20736
+    },
+    {
+      "index": 8,
+      "file": "008_agent.mp3",
+      "speaker": "agent",
+      "voice": "en-IN-NeerjaNeural",
+      "text": "No problem — so it's you and your wife, two people. What's her age?",
+      "bytes": 37872
+    },
+    {
+      "index": 9,
+      "file": "009_caller.mp3",
+      "speaker": "caller",
+      "voice": "en-IN-PrabhatNeural",
+      "text": "I'm 45, sorry, I misspoke earlier.",
+      "bytes": 25344
+    },
+    {
+      "index": 10,
+      "file": "010_agent.mp3",
+      "speaker": "agent",
+      "voice": "en-IN-NeerjaNeural",
+      "text": "Sorry — did you mean you're 45, or is that your wife's age?",
+      "bytes": 33696
+    },
+    {
+      "index": 11,
+      "file": "011_caller.mp3",
+      "speaker": "caller",
+      "voice": "en-IN-PrabhatNeural",
+      "text": "I don't remember if we have anything already, maybe through her job?",
+      "bytes": 33264
+    },
+    {
+      "index": 12,
+      "file": "012_agent.mp3",
+      "speaker": "agent",
+      "voice": "en-IN-NeerjaNeural",
+      "text": "That's fine, no need to remember right now. Do you have any existing health conditions, or is it a clean bill of health?",
+      "bytes": 53712
+    },
+    {
+      "index": 13,
+      "file": "013_caller.mp3",
+      "speaker": "caller",
+      "voice": "en-IN-PrabhatNeural",
+      "text": "Delhi. Or Gurgaon, we're moving next month.",
+      "bytes": 29088
+    },
+    {
+      "index": 14,
+      "file": "014_agent.mp3",
+      "speaker": "agent",
+      "voice": "en-IN-NeerjaNeural",
+      "text": "Got it, Delhi or Gurgaon. Do you have any existing health conditions, or is it a clean bill of health?",
+      "bytes": 49680
+    }
+  ]
+}

@@ -1,0 +1,154 @@
+{
+  "call_id": "68f87603dbb8",
+  "label": "03_conflicting_details",
+  "model": "qwen/qwen3.8-27b",
+  "language": "en",
+  "started_at": "2026-10-02T06:35:03.805990+00:00",
+  "summary": {
+    "call_id": "68f87603dbb8",
+    "started_at": "2026-10-02T06:35:03.805990+00:00",
+    "lead": {},
+    "handoff": null,
+    "callback": null,
+    "kb_searches": 0,
+    "grounded_answers": 0,
+    "refusals": 0,
+    "grounding_rate": null
+  },
+  "kb_searches": [],
+  "transcript": [
+    {
+      "role": "agent",
+      "text": "Hi, this is Meera from Niva Bupa. I'm calling to see if you'd like to explore health cover options for you or your family \u2014 is now a good time for a quick chat?",
+      "at": "2026-10-02T06:35:16.222064+00:00",
+      "tool_calls": [],
+      "timings_ms": {
+        "llm_0": 12407.9,
+        "turn_total": 12407.9
+      }
+    },
+    {
+      "role": "caller",
+      "text": "Sure.",
+      "at": "2026-10-02T06:35:16.224966+00:00",
+      "tool_calls": [],
+      "timings_ms": {}
+    },
+    {
+      "role": "agent",
+      "text": "Great. To start, who are you looking to get cover for \u2014 just yourself, or your family?",
+      "at": "2026-10-02T06:35:29.589860+00:00",
+      "tool_calls": [],
+      "timings_ms": {
+        "llm_0": 13364.5,
+        "turn_total": 13364.5
+      }
+    },
+    {
+      "role": "caller",
+      "text": "It's just for myself.",
+      "at": "2026-10-02T06:35:29.593040+00:00",
+      "tool_calls": [],
+      "timings_ms": {}
+    },
+    {
+      "role": "agent",
+      "text": "Got it, just for yourself. How old are you?",
+      "at": "2026-10-02T06:35:43.939256+00:00",
+      "tool_calls": [],
+      "timings_ms": {
+        "llm_0": 14345.8,
+        "turn_total": 14345.8
+      }
+    },
+    {
+      "role": "caller",
+      "text": "I'm 35.",
+      "at": "2026-10-02T06:35:43.940434+00:00",
+      "tool_calls": [],
+      "timings_ms": {}
+    },
+    {
+      "role": "agent",
+      "text": "Thanks. Which city do you live in?",
+      "at": "2026-10-02T06:35:58.290499+00:00",
+      "tool_calls": [],
+      "timings_ms": {
+        "llm_0": 14349.6,
+        "turn_total": 14349.6
+      }
+    },
+    {
+      "role": "caller",
+      "text": "Actually hang on, add my wife too.",
+      "at": "2026-10-02T06:35:58.292583+00:00",
+      "tool_calls": [],
+      "timings_ms": {}
+    },
+    {
+      "role": "agent",
+      "text": "No problem \u2014 so it's you and your wife, two people. What's her age?",
+      "at": "2026-10-02T06:36:16.771895+00:00",
+      "tool_calls": [],
+      "timings_ms": {
+        "throttle_wait_0": 18179.4,
+        "llm_0": 299.1,
+        "turn_total": 18478.8
+      }
+    },
+    {
+      "role": "caller",
+      "text": "I'm 45, sorry, I misspoke earlier.",
+      "at": "2026-10-02T06:36:16.775152+00:00",
+      "tool_calls": [],
+      "timings_ms": {}
+    },
+    {
+      "role": "agent",
+      "text": "Sorry \u2014 did you mean you're 45, or is that your wife's age?",
+      "at": "2026-10-02T06:36:30.155861+00:00",
+      "tool_calls": [],
+      "timings_ms": {
+        "throttle_wait_0": 13064.7,
+        "llm_0": 314.9,
+        "turn_total": 13380.3
+      }
+    },
+    {
+      "role": "caller",
+      "text": "I don't remember if we have anything already, maybe through her job?",
+      "at": "2026-10-02T06:36:30.159083+00:00",
+      "tool_calls": [],
+      "timings_ms": {}
+    },
+    {
+      "role": "agent",
+      "text": "That's fine, no need to remember right now. Do you have any existing health conditions, or is it a clean bill of health?",
+      "at": "2026-10-02T06:36:44.524592+00:00",
+      "tool_calls": [],
+      "timings_ms": {
+        "throttle_wait_0": 14030.1,
+        "llm_0": 334.4,
+        "turn_total": 14365.1
+      }
+    },
+    {
+      "role": "caller",
+      "text": "Delhi. Or Gurgaon, we're moving next month.",
+      "at": "2026-10-02T06:36:44.527838+00:00",
+      "tool_calls": [],
+      "timings_ms": {}
+    },
+    {
+      "role": "agent",
+      "text": "Got it, Delhi or Gurgaon. Do you have any existing health conditions, or is it a clean bill of health?",
+      "at": "2026-10-02T06:36:58.875003+00:00",
+      "tool_calls": [],
+      "timings_ms": {
+        "throttle_wait_0": 14012.6,
+        "llm_0": 333.6,
+        "turn_total": 14346.8
+      }
+    }
+  ]
+}

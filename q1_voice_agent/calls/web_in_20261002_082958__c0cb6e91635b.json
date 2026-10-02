@@ -1,0 +1,100 @@
+{
+  "call_id": "c0cb6e91635b",
+  "label": "web_in_20261002_082958",
+  "model": "openai/gpt-oss-120b",
+  "language": "en",
+  "started_at": "2026-10-02T08:28:52.624090+00:00",
+  "summary": {
+    "call_id": "c0cb6e91635b",
+    "started_at": "2026-10-02T08:28:52.624090+00:00",
+    "lead": {},
+    "handoff": null,
+    "callback": null,
+    "kb_searches": 0,
+    "grounded_answers": 0,
+    "refusals": 0,
+    "grounding_rate": null
+  },
+  "kb_searches": [],
+  "transcript": [
+    {
+      "role": "agent",
+      "text": "Hi, I\u2019m Meera calling from Niva\u202fBupa. I\u2019d like to see if we can help you with health\u2011insurance coverage\u2014 is now a good time to talk?",
+      "at": "2026-10-02T08:28:53.764573+00:00",
+      "tool_calls": [],
+      "timings_ms": {
+        "llm_0": 1126.4,
+        "turn_total": 1126.5
+      }
+    },
+    {
+      "role": "caller",
+      "text": "Yes, it's good.",
+      "at": "2026-10-02T08:29:09.011235+00:00",
+      "tool_calls": [],
+      "timings_ms": {}
+    },
+    {
+      "role": "agent",
+      "text": "Great! Who are you looking to cover and how many people would that be?",
+      "at": "2026-10-02T08:29:09.734185+00:00",
+      "tool_calls": [],
+      "timings_ms": {
+        "llm_0": 722.8,
+        "turn_total": 722.9
+      }
+    },
+    {
+      "role": "caller",
+      "text": "It's for me and my wife.",
+      "at": "2026-10-02T08:29:20.171620+00:00",
+      "tool_calls": [],
+      "timings_ms": {}
+    },
+    {
+      "role": "agent",
+      "text": "And what\u2019s the age of the older of the two of you?Which city do you both live in?Do either of you have any pre\u2011existing medical conditions?Are you currently holding any health\u2011insurance cover, perhaps through an employer or another policy?Sorry\u2014 was that the age you mentioned earlier, or could you share the exact age of the older person?",
+      "at": "2026-10-02T08:29:21.287846+00:00",
+      "tool_calls": [],
+      "timings_ms": {
+        "llm_0": 1116.1,
+        "turn_total": 1116.2
+      }
+    },
+    {
+      "role": "caller",
+      "text": "and",
+      "at": "2026-10-02T08:29:25.904329+00:00",
+      "tool_calls": [],
+      "timings_ms": {}
+    },
+    {
+      "role": "agent",
+      "text": "Sorry about that\u2014 could you tell me the age of the older of you two?",
+      "at": "2026-10-02T08:29:26.929278+00:00",
+      "tool_calls": [],
+      "timings_ms": {
+        "llm_0": 1024.8,
+        "turn_total": 1024.9
+      }
+    },
+    {
+      "role": "caller",
+      "text": "Mm-hmm.",
+      "at": "2026-10-02T08:29:36.146810+00:00",
+      "tool_calls": [],
+      "timings_ms": {}
+    },
+    {
+      "role": "agent",
+      "text": "Could you let me know the age of the older of you two?",
+      "at": "2026-10-02T08:29:54.813679+00:00",
+      "tool_calls": [],
+      "timings_ms": {
+        "throttle_wait_0": 17867.7,
+        "llm_0": 798.6,
+        "turn_total": 18666.8
+      }
+    }
+  ]
+}

@@ -1,0 +1,83 @@
+{
+  "label": "05_human_request",
+  "market": "in",
+  "voices": {
+    "agent": "en-IN-NeerjaNeural",
+    "caller": "en-IN-PrabhatNeural"
+  },
+  "source_transcript": "05_human_request__b47f833f2b26.json",
+  "model": "qwen/qwen3.8-27b",
+  "summary": {
+    "call_id": "b47f833f2b26",
+    "started_at": "2026-10-02T06:38:42.348068+00:00",
+    "lead": {},
+    "handoff": {
+      "reason": "caller_requested",
+      "context": "Caller wants a human agent; was qualifying for father aged 71.",
+      "at": "2026-10-02T06:39:38.299379+00:00"
+    },
+    "callback": null,
+    "kb_searches": 0,
+    "grounded_answers": 0,
+    "refusals": 0,
+    "grounding_rate": null
+  },
+  "turns": [
+    {
+      "index": 0,
+      "file": "000_agent.mp3",
+      "speaker": "agent",
+      "voice": "en-IN-NeerjaNeural",
+      "text": "Hi, this is Meera calling from Niva Bupa. I'm reaching out about health cover for you and your family — is now a good time for a quick chat?",
+      "bytes": 62640
+    },
+    {
+      "index": 1,
+      "file": "001_caller.mp3",
+      "speaker": "caller",
+      "voice": "en-IN-PrabhatNeural",
+      "text": "Okay.",
+      "bytes": 11232
+    },
+    {
+      "index": 2,
+      "file": "002_agent.mp3",
+      "speaker": "agent",
+      "voice": "en-IN-NeerjaNeural",
+      "text": "Great. To start, who are you looking to get covered — just yourself, or your family too?",
+      "bytes": 45936
+    },
+    {
+      "index": 3,
+      "file": "003_caller.mp3",
+      "speaker": "caller",
+      "voice": "en-IN-PrabhatNeural",
+      "text": "It's for my father, he's 71.",
+      "bytes": 21600
+    },
+    {
+      "index": 4,
+      "file": "004_agent.mp3",
+      "speaker": "agent",
+      "voice": "en-IN-NeerjaNeural",
+      "text": "Thanks — so it's for your father, aged 71. What city is he based in?",
+      "bytes": 40896
+    },
+    {
+      "index": 5,
+      "file": "005_caller.mp3",
+      "speaker": "caller",
+      "voice": "en-IN-PrabhatNeural",
+      "text": "Actually, I'd rather just speak to a real person about this.",
+      "bytes": 31536
+    },
+    {
+      "index": 6,
+      "file": "006_agent.mp3",
+      "speaker": "agent",
+      "voice": "en-IN-NeerjaNeural",
+      "text": "Of course — I'll get a colleague to call you back. Is this the best number to reach you on?",
+      "bytes": 43200
+    }
+  ]
+}

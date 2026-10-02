@@ -1,0 +1,158 @@
+{
+  "call_id": "60a1e7bb3b26",
+  "label": "ph_02_objection_escalation",
+  "model": "openai/gpt-oss-120b",
+  "language": "ph",
+  "started_at": "2026-10-02T07:08:59.029942+00:00",
+  "summary": {
+    "call_id": "60a1e7bb3b26",
+    "started_at": "2026-10-02T07:08:59.029942+00:00",
+    "lead": {},
+    "handoff": {
+      "reason": "account_specific",
+      "context": "Caller requests exact amount paid so far on policy",
+      "at": "2026-10-02T07:10:02.441569+00:00"
+    },
+    "callback": null,
+    "kb_searches": 1,
+    "grounded_answers": 0,
+    "refusals": 1,
+    "grounding_rate": 0.0
+  },
+  "kb_searches": [
+    {
+      "query": "policy surrender process premium too high stop policy",
+      "grounded": false,
+      "confidence": -99.0,
+      "threshold": 1.0,
+      "citations": [],
+      "latency_ms": 516.8
+    }
+  ],
+  "transcript": [
+    {
+      "role": "agent",
+      "text": "Magandang umaga po, si Let po ito from [bank] bancassurance. Tumatawag po ako tungkol sa inyong policy. May time po ba kayo for a few minutes?",
+      "at": "2026-10-02T07:08:59.823071+00:00",
+      "tool_calls": [],
+      "timings_ms": {
+        "llm_0": 774.3,
+        "turn_total": 774.3
+      }
+    },
+    {
+      "role": "caller",
+      "text": "Oo, bakit po?",
+      "at": "2026-10-02T07:08:59.824161+00:00",
+      "tool_calls": [],
+      "timings_ms": {}
+    },
+    {
+      "role": "agent",
+      "text": "Salamat po, Sir/Ma'am. Pwede ko po bang makumpirma kung kayo po ang policyholder ng inyong insurance?",
+      "at": "2026-10-02T07:09:00.591819+00:00",
+      "tool_calls": [],
+      "timings_ms": {
+        "llm_0": 767.6,
+        "turn_total": 767.6
+      }
+    },
+    {
+      "role": "caller",
+      "text": "Ang mahal naman po kasi ng premium, gusto ko na po itigil.",
+      "at": "2026-10-02T07:09:00.592900+00:00",
+      "tool_calls": [],
+      "timings_ms": {}
+    },
+    {
+      "role": "agent",
+      "text": "Naiintindihan ko po, Sir/Ma'am. Wala po akong exact na detalye tungkol diyan ngayon, pero ipapasa ko po kayo sa colleague namin na makakatulong sa inyo. Okay po ba?",
+      "at": "2026-10-02T07:10:00.709746+00:00",
+      "tool_calls": [
+        {
+          "tool": "search_knowledge_base",
+          "args": {
+            "category": "faq",
+            "query": "policy surrender process premium too high stop policy"
+          },
+          "grounded": false,
+          "confidence": null,
+          "latency_ms": 516.8
+        }
+      ],
+      "timings_ms": {
+        "llm_0": 843.8,
+        "tool_search_knowledge_base_0": 516.8,
+        "throttle_wait_1": 58119.4,
+        "llm_1": 635.6,
+        "turn_total": 60116.0
+      }
+    },
+    {
+      "role": "caller",
+      "text": "Magkano po ba exactly ang nabayaran ko na so far?",
+      "at": "2026-10-02T07:10:00.711658+00:00",
+      "tool_calls": [],
+      "timings_ms": {}
+    },
+    {
+      "role": "agent",
+      "text": "Pasensya po, wala po akong access sa exact na balance o payment history ninyo dito sa linya. Ipapasa ko po kayo sa colleague namin na makakatingin niyan \u2014 okay lang po ba?",
+      "at": "2026-10-02T07:10:01.405464+00:00",
+      "tool_calls": [],
+      "timings_ms": {
+        "llm_0": 693.8,
+        "turn_total": 693.8
+      }
+    },
+    {
+      "role": "caller",
+      "text": "Eh gusto ko po talaga malaman. Pakiusap po.",
+      "at": "2026-10-02T07:10:01.408401+00:00",
+      "tool_calls": [],
+      "timings_ms": {}
+    },
+    {
+      "role": "agent",
+      "text": "Sige po, ipapasa ko po kayo sa colleague namin para matulungan kayo sa eksaktong halagang nabayaran na po ninyo.",
+      "at": "2026-10-02T07:11:01.431930+00:00",
+      "tool_calls": [
+        {
+          "tool": "request_human_handoff",
+          "args": {
+            "context": "Caller requests exact amount paid so far on policy",
+            "reason": "account_specific"
+          },
+          "grounded": null,
+          "confidence": null,
+          "latency_ms": 1831.3
+        }
+      ],
+      "timings_ms": {
+        "throttle_wait_0": 278.3,
+        "llm_0": 754.6,
+        "tool_request_human_handoff_0": 1831.3,
+        "throttle_wait_1": 56686.8,
+        "llm_1": 470.9,
+        "turn_total": 60022.7
+      }
+    },
+    {
+      "role": "caller",
+      "text": "Sige po, pwede po ba akong makausap ng tao?",
+      "at": "2026-10-02T07:11:01.435686+00:00",
+      "tool_calls": [],
+      "timings_ms": {}
+    },
+    {
+      "role": "agent",
+      "text": "Opo, ipapasa ko po kayo sa colleague namin at siya po ang tatawag sa inyo agad.",
+      "at": "2026-10-02T07:11:02.057177+00:00",
+      "tool_calls": [],
+      "timings_ms": {
+        "llm_0": 621.4,
+        "turn_total": 621.5
+      }
+    }
+  ]
+}

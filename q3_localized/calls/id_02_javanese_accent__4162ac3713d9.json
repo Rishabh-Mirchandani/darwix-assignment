@@ -1,0 +1,164 @@
+{
+  "call_id": "4162ac3713d9",
+  "label": "id_02_javanese_accent",
+  "model": "openai/gpt-oss-120b",
+  "language": "id",
+  "started_at": "2026-10-02T07:14:30.597867+00:00",
+  "summary": {
+    "call_id": "4162ac3713d9",
+    "started_at": "2026-10-02T07:14:30.597867+00:00",
+    "lead": {},
+    "handoff": {
+      "reason": "caller_requested",
+      "context": "User requested to speak with a human representative",
+      "at": "2026-10-02T07:16:35.492515+00:00"
+    },
+    "callback": null,
+    "kb_searches": 1,
+    "grounded_answers": 1,
+    "refusals": 0,
+    "grounding_rate": 1.0
+  },
+  "kb_searches": [
+    {
+      "query": "late payment penalty on instalment",
+      "grounded": true,
+      "confidence": 9.552321434020996,
+      "threshold": 2.0,
+      "citations": [
+        "internal://id/coverage_rule",
+        "internal://id/coverage_rule",
+        "internal://id/objection_handling",
+        "internal://id/eligibility_rule"
+      ],
+      "latency_ms": 554.8
+    }
+  ],
+  "transcript": [
+    {
+      "role": "agent",
+      "text": "Selamat pagi, Bapak/Ibu. Saya Sari dari PT. Maju Sejahtera Pembiayaan. Mohon maaf mengganggu waktunya, apakah benar ini dengan Bapak/Ibu?",
+      "at": "2026-10-02T07:14:31.641421+00:00",
+      "tool_calls": [],
+      "timings_ms": {
+        "llm_0": 1034.8,
+        "turn_total": 1034.8
+      }
+    },
+    {
+      "role": "caller",
+      "text": "Nggih, leres. Kulo piyambak.",
+      "at": "2026-10-02T07:14:31.642334+00:00",
+      "tool_calls": [],
+      "timings_ms": {}
+    },
+    {
+      "role": "agent",
+      "text": "Terima kasih, Pak. Boleh saya tahu nama Bapak untuk pencatatan?",
+      "at": "2026-10-02T07:14:32.422895+00:00",
+      "tool_calls": [],
+      "timings_ms": {
+        "llm_0": 780.5,
+        "turn_total": 780.5
+      }
+    },
+    {
+      "role": "caller",
+      "text": "Mboten, dereng nampi remindere Mbak.",
+      "at": "2026-10-02T07:14:32.434801+00:00",
+      "tool_calls": [],
+      "timings_ms": {}
+    },
+    {
+      "role": "agent",
+      "text": "Baik, Pak. Apakah Bapak memiliki rencana untuk melakukan pembayaran cicilan dalam beberapa hari ke depan?",
+      "at": "2026-10-02T07:14:33.377233+00:00",
+      "tool_calls": [],
+      "timings_ms": {
+        "llm_0": 942.4,
+        "turn_total": 942.4
+      }
+    },
+    {
+      "role": "caller",
+      "text": "Nggih niku, kulo tasih bingung kaliyan dendane. Kok katah sanget nggih?",
+      "at": "2026-10-02T07:14:33.378929+00:00",
+      "tool_calls": [],
+      "timings_ms": {}
+    },
+    {
+      "role": "agent",
+      "text": "Baik, Pak. Untuk keterlambatan ada denda harian yang dihitung dari nilai angsuran yang tertunggak, jadi semakin lama keterlambatannya, denda akan bertambah. Apakah Bapak ingin saya cek berapa denda yang terakumulasi untuk cicilan Bapak?",
+      "at": "2026-10-02T07:15:34.483972+00:00",
+      "tool_calls": [
+        {
+          "tool": "search_knowledge_base",
+          "args": {
+            "query": "late payment penalty on instalment"
+          },
+          "grounded": true,
+          "confidence": null,
+          "latency_ms": 554.8
+        }
+      ],
+      "timings_ms": {
+        "throttle_wait_0": 58512.4,
+        "llm_0": 637.4,
+        "tool_search_knowledge_base_0": 554.8,
+        "throttle_wait_1": 542.7,
+        "llm_1": 856.1,
+        "turn_total": 61104.4
+      }
+    },
+    {
+      "role": "caller",
+      "text": "Monggo dijelaske malih, kulo mboten paham.",
+      "at": "2026-10-02T07:15:34.488040+00:00",
+      "tool_calls": [],
+      "timings_ms": {}
+    },
+    {
+      "role": "agent",
+      "text": "Pak, denda yang dikenakan adalah denda harian yang dihitung dari nilai angsuran yang belum dibayar, mulai dari hari pertama setelah tanggal jatuh tempo; semakin lama pembayaran tertunda, denda akan terus bertambah. Apakah Bapak ingin saya cek berapa total denda yang sudah terakumulasi untuk cicilan Bapak?",
+      "at": "2026-10-02T07:16:33.654293+00:00",
+      "tool_calls": [],
+      "timings_ms": {
+        "throttle_wait_0": 58291.6,
+        "llm_0": 873.8,
+        "turn_total": 59165.7
+      }
+    },
+    {
+      "role": "caller",
+      "text": "Nggih sampun, kulo pengin ngendikan kaliyan petugase mawon.",
+      "at": "2026-10-02T07:16:33.657075+00:00",
+      "tool_calls": [],
+      "timings_ms": {}
+    },
+    {
+      "role": "agent",
+      "text": "Baik, Pak, saya sambungkan ke rekan kami yang akan menghubungi Bapak kembali.",
+      "at": "2026-10-02T07:17:34.588579+00:00",
+      "tool_calls": [
+        {
+          "tool": "request_human_handoff",
+          "args": {
+            "context": "User requested to speak with a human representative",
+            "reason": "caller_requested"
+          },
+          "grounded": null,
+          "confidence": null,
+          "latency_ms": 1820.3
+        }
+      ],
+      "timings_ms": {
+        "throttle_wait_0": 1076.8,
+        "llm_0": 758.3,
+        "tool_request_human_handoff_0": 1820.3,
+        "throttle_wait_1": 56591.4,
+        "llm_1": 683.4,
+        "turn_total": 60930.9
+      }
+    }
+  ]
+}

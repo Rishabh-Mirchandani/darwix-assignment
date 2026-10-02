@@ -1,0 +1,194 @@
+{
+  "built_at": "2026-10-02T05:32:26.161752+00:00",
+  "config": {
+    "chunk_target_tokens": 220,
+    "chunk_max_tokens": 380,
+    "chunk_overlap_tokens": 40
+  },
+  "stats": {
+    "pages_total": 100,
+    "pages_parsed": 100,
+    "pages_empty": 0,
+    "sections_total": 2693,
+    "sections_by_kind": {
+      "prose": 1943,
+      "faq": 332,
+      "table": 72,
+      "definition": 346
+    },
+    "chunks_produced": 2769,
+    "chunks_before_dedupe": 2734,
+    "dropped_low_information": 35,
+    "drop_reasons": {
+      "too short (6 tokens)": 1,
+      "pointer to content that did not survive extraction": 11,
+      "dangling lead-in (ends with colon, no body)": 21,
+      "less than half alphabetic characters": 2
+    },
+    "records_final": 2084,
+    "exact_duplicates": 628,
+    "near_duplicates": 22,
+    "records_with_pii": 2,
+    "pii_type_counts": {
+      "email": 2
+    },
+    "page_warnings": [],
+    "chunk_warnings": [
+      {
+        "record_id": "kb_product_plan_b80ae5f7_00",
+        "warning": "definition section kept whole at 1410 tokens (over 380); splitting would break its structure"
+      },
+      {
+        "record_id": "kb_product_plan_2309faac_00",
+        "warning": "definition section kept whole at 416 tokens (over 380); splitting would break its structure"
+      },
+      {
+        "record_id": "kb_product_plan_e5c32220_00",
+        "warning": "definition section kept whole at 454 tokens (over 380); splitting would break its structure"
+      },
+      {
+        "record_id": "kb_product_plan_8665e0ba_00",
+        "warning": "definition section kept whole at 456 tokens (over 380); splitting would break its structure"
+      },
+      {
+        "record_id": "kb_product_plan_b80ae5f7_00",
+        "warning": "definition section kept whole at 1410 tokens (over 380); splitting would break its structure"
+      },
+      {
+        "record_id": "kb_eligibility_rule_3a3cf0b2_00",
+        "warning": "chunk exceeds max at 576 tokens"
+      },
+      {
+        "record_id": "kb_coverage_rule_72454a1a_00",
+        "warning": "table section kept whole at 532 tokens (over 380); splitting would break its structure"
+      },
+      {
+        "record_id": "kb_coverage_rule_8d158962_00",
+        "warning": "table section kept whole at 616 tokens (over 380); splitting would break its structure"
+      },
+      {
+        "record_id": "kb_coverage_rule_a80b0e16_00",
+        "warning": "table section kept whole at 694 tokens (over 380); splitting would break its structure"
+      },
+      {
+        "record_id": "kb_faq_b70f4eb7_00",
+        "warning": "faq section kept whole at 597 tokens (over 380); splitting would break its structure"
+      },
+      {
+        "record_id": "kb_faq_b70f4eb7_00",
+        "warning": "faq section kept whole at 597 tokens (over 380); splitting would break its structure"
+      },
+      {
+        "record_id": "kb_faq_4dd7c357_00",
+        "warning": "definition section kept whole at 422 tokens (over 380); splitting would break its structure"
+      },
+      {
+        "record_id": "kb_faq_b70f4eb7_00",
+        "warning": "faq section kept whole at 597 tokens (over 380); splitting would break its structure"
+      },
+      {
+        "record_id": "kb_faq_b70f4eb7_00",
+        "warning": "faq section kept whole at 597 tokens (over 380); splitting would break its structure"
+      },
+      {
+        "record_id": "kb_faq_4dd7c357_00",
+        "warning": "definition section kept whole at 422 tokens (over 380); splitting would break its structure"
+      },
+      {
+        "record_id": "kb_faq_b70f4eb7_00",
+        "warning": "faq section kept whole at 597 tokens (over 380); splitting would break its structure"
+      },
+      {
+        "record_id": "kb_faq_4dd7c357_00",
+        "warning": "definition section kept whole at 422 tokens (over 380); splitting would break its structure"
+      },
+      {
+        "record_id": "kb_faq_b70f4eb7_00",
+        "warning": "faq section kept whole at 597 tokens (over 380); splitting would break its structure"
+      },
+      {
+        "record_id": "kb_eligibility_rule_3a3cf0b2_00",
+        "warning": "chunk exceeds max at 576 tokens"
+      },
+      {
+        "record_id": "kb_service_policy_2a5c25b0_00",
+        "warning": "chunk exceeds max at 576 tokens"
+      },
+      {
+        "record_id": "kb_eligibility_rule_3a3cf0b2_00",
+        "warning": "chunk exceeds max at 576 tokens"
+      },
+      {
+        "record_id": "kb_eligibility_rule_3a3cf0b2_00",
+        "warning": "chunk exceeds max at 576 tokens"
+      },
+      {
+        "record_id": "kb_eligibility_rule_3a3cf0b2_00",
+        "warning": "chunk exceeds max at 576 tokens"
+      },
+      {
+        "record_id": "kb_claims_process_ca9188a0_00",
+        "warning": "chunk exceeds max at 576 tokens"
+      },
+      {
+        "record_id": "kb_eligibility_rule_3a3cf0b2_00",
+        "warning": "chunk exceeds max at 576 tokens"
+      },
+      {
+        "record_id": "kb_eligibility_rule_3a3cf0b2_00",
+        "warning": "chunk exceeds max at 576 tokens"
+      },
+      {
+        "record_id": "kb_service_policy_2a5c25b0_00",
+        "warning": "chunk exceeds max at 576 tokens"
+      },
+      {
+        "record_id": "kb_claims_process_ca9188a0_00",
+        "warning": "chunk exceeds max at 576 tokens"
+      },
+      {
+        "record_id": "kb_claims_process_ca9188a0_00",
+        "warning": "chunk exceeds max at 576 tokens"
+      },
+      {
+        "record_id": "kb_eligibility_rule_3a3cf0b2_00",
+        "warning": "chunk exceeds max at 576 tokens"
+      },
+      {
+        "record_id": "kb_eligibility_rule_3a3cf0b2_00",
+        "warning": "chunk exceeds max at 576 tokens"
+      },
+      {
+        "record_id": "kb_product_plan_b80ae5f7_00",
+        "warning": "definition section kept whole at 550 tokens (over 380); splitting would break its structure"
+      },
+      {
+        "record_id": "kb_claims_process_ca9188a0_00",
+        "warning": "chunk exceeds max at 576 tokens"
+      },
+      {
+        "record_id": "kb_eligibility_rule_3a3cf0b2_00",
+        "warning": "chunk exceeds max at 576 tokens"
+      },
+      {
+        "record_id": "kb_eligibility_rule_3a3cf0b2_00",
+        "warning": "chunk exceeds max at 576 tokens"
+      }
+    ],
+    "categories": {
+      "coverage_rule": 1119,
+      "product_plan": 542,
+      "eligibility_rule": 293,
+      "claims_process": 76,
+      "service_policy": 41,
+      "faq": 13
+    },
+    "token_histogram": {
+      "0-100": 1452,
+      "201-300": 150,
+      "101-200": 437,
+      "380+": 10,
+      "301-380": 35
+    }
+  }
+}

@@ -1,0 +1,73 @@
+{
+  "fetched_at": "2026-10-02T09:33:02.038956+00:00",
+  "host": "transactions.nivabupa.com",
+  "robots_note": "Host serves no robots.txt (404), which by convention permits crawling. The www host's Disallow: /content/dam/ is honoured separately and those PDFs were NOT fetched.",
+  "totals": {
+    "attempted": 5,
+    "ok": 5,
+    "failed": 0,
+    "total_pages": 159
+  },
+  "records": [
+    {
+      "url": "https://transactions.nivabupa.com/pages/doc/policy_wording/ReAssure-2.0-Policy-Wording.pdf",
+      "product": "ReAssure 2.0",
+      "category": "coverage_rule",
+      "status": "ok",
+      "pages": 34,
+      "bytes_downloaded": 670955,
+      "raw_path": "data\\raw\\pdfs\\reassure-2-0__bd00c98a432db2c3.pdf",
+      "content_hash": "bd00c98a432db2c3",
+      "error": null,
+      "fetched_at": "2026-10-02T09:32:51.140125+00:00"
+    },
+    {
+      "url": "https://transactions.nivabupa.com/pages/doc/policy_wording/Senior-First-Policy-Wording.pdf",
+      "product": "Senior First",
+      "category": "eligibility_rule",
+      "status": "ok",
+      "pages": 28,
+      "bytes_downloaded": 289040,
+      "raw_path": "data\\raw\\pdfs\\senior-first__cb42f5537482f39d.pdf",
+      "content_hash": "cb42f5537482f39d",
+      "error": null,
+      "fetched_at": "2026-10-02T09:32:53.870878+00:00"
+    },
+    {
+      "url": "https://transactions.nivabupa.com/pages/doc/policy_wording/Health-Companion-Variant2022-PolicyWording.pdf",
+      "product": "Health Companion",
+      "category": "coverage_rule",
+      "status": "ok",
+      "pages": 27,
+      "bytes_downloaded": 163585,
+      "raw_path": "data\\raw\\pdfs\\health-companion__f0d9e3ddc037784a.pdf",
+      "content_hash": "f0d9e3ddc037784a",
+      "error": null,
+      "fetched_at": "2026-10-02T09:32:56.290744+00:00"
+    },
+    {
+      "url": "https://transactions.nivabupa.com/pages/doc/policy_wording/Health-Assurance-Policy-Wording.pdf",
+      "product": "Health Assurance",
+      "category": "coverage_rule",
+      "status": "ok",
+      "pages": 36,
+      "bytes_downloaded": 150779,
+      "raw_path": "data\\raw\\pdfs\\health-assurance__1221e8636a44828e.pdf",
+      "content_hash": "1221e8636a44828e",
+      "error": null,
+      "fetched_at": "2026-10-02T09:32:58.153142+00:00"
+    },
+    {
+      "url": "https://transactions.nivabupa.com/pages/doc/policy_wording/Rise_Policy_Wordings.pdf",
+      "product": "Rise",
+      "category": "coverage_rule",
+      "status": "ok",
+      "pages": 34,
+      "bytes_downloaded": 192496,
+      "raw_path": "data\\raw\\pdfs\\rise__c8a55619e1003300.pdf",
+      "content_hash": "c8a55619e1003300",
+      "error": null,
+      "fetched_at": "2026-10-02T09:33:00.223405+00:00"
+    }
+  ]
+}

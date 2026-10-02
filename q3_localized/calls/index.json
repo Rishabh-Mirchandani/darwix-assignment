@@ -1,0 +1,102 @@
+[
+  {
+    "label": "id_01_installment_reminder",
+    "market": "id",
+    "requirement": "Cooperative customer + colloquial register + payment difficulty",
+    "passed": true,
+    "language_consistency": 1.0,
+    "transcript": "id_01_installment_reminder__e26af196a978.json",
+    "model": "openai/gpt-oss-120b",
+    "audio_dir": "data/audio/q3_id_01_installment_reminder",
+    "summary": {
+      "call_id": "e26af196a978",
+      "started_at": "2026-10-02T07:11:05.370958+00:00",
+      "lead": {},
+      "handoff": {
+        "reason": "caller_requested",
+        "context": "Caller requested extension info, no data available",
+        "at": "2026-10-02T07:14:10.427220+00:00"
+      },
+      "callback": null,
+      "kb_searches": 2,
+      "grounded_answers": 1,
+      "refusals": 1,
+      "grounding_rate": 0.5
+    }
+  },
+  {
+    "label": "id_02_javanese_accent",
+    "market": "id",
+    "requirement": "Regional accent (Javanese) + objection + escalation",
+    "passed": true,
+    "language_consistency": 1.0,
+    "transcript": "id_02_javanese_accent__4162ac3713d9.json",
+    "model": "openai/gpt-oss-120b",
+    "audio_dir": "data/audio/q3_id_02_javanese_accent",
+    "summary": {
+      "call_id": "4162ac3713d9",
+      "started_at": "2026-10-02T07:14:30.597867+00:00",
+      "lead": {},
+      "handoff": {
+        "reason": "caller_requested",
+        "context": "User requested to speak with a human representative",
+        "at": "2026-10-02T07:16:35.492515+00:00"
+      },
+      "callback": null,
+      "kb_searches": 1,
+      "grounded_answers": 1,
+      "refusals": 0,
+      "grounding_rate": 1.0
+    }
+  },
+  {
+    "label": "ph_01_premium_reminder",
+    "market": "ph",
+    "requirement": "Cooperative customer + mixed English/finance terms + lapse objection",
+    "passed": true,
+    "language_consistency": 1.0,
+    "transcript": "ph_01_premium_reminder__a6e6c81c5e0b.json",
+    "model": "qwen/qwen3.8-27b",
+    "audio_dir": "data/audio/q3_ph_01_premium_reminder",
+    "summary": {
+      "call_id": "a6e6c81c5e0b",
+      "started_at": "2026-10-02T07:02:11.838823+00:00",
+      "lead": {},
+      "handoff": {
+        "reason": "unanswered_question",
+        "context": "Client (Mr. Santos) wants to change his beneficiary; I had no grounded info so I offered a colleague callback.",
+        "at": "2026-10-02T07:06:15.368456+00:00"
+      },
+      "callback": null,
+      "kb_searches": 2,
+      "grounded_answers": 1,
+      "refusals": 1,
+      "grounding_rate": 0.5
+    }
+  },
+  {
+    "label": "ph_02_objection_escalation",
+    "market": "ph",
+    "requirement": "Sector objection + out-of-scope + human escalation",
+    "passed": true,
+    "language_consistency": 1.0,
+    "transcript": "ph_02_objection_escalation__60a1e7bb3b26.json",
+    "model": "openai/gpt-oss-120b",
+    "audio_dir": "data/audio/q3_ph_02_objection_escalation",
+    "summary": {
+      "call_id": "60a1e7bb3b26",
+      "started_at": "2026-10-02T07:08:59.029942+00:00",
+      "lead": {},
+      "handoff": {
+        "reason": "account_specific",
+        "context": "Caller requests exact amount paid so far on policy",
+        "at": "2026-10-02T07:10:02.441569+00:00"
+      },
+      "callback": null,
+      "kb_searches": 1,
+      "grounded_answers": 0,
+      "refusals": 1,
+      "grounding_rate": 0.0
+    }
+  }
+]

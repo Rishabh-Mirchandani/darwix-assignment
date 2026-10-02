@@ -1,0 +1,142 @@
+{
+  "call_id": "9c4f98c76a2b",
+  "label": "04_out_of_scope",
+  "model": "qwen/qwen3.8-27b",
+  "language": "en",
+  "started_at": "2026-10-02T06:22:55.372323+00:00",
+  "summary": {
+    "call_id": "9c4f98c76a2b",
+    "started_at": "2026-10-02T06:22:55.372323+00:00",
+    "lead": {},
+    "handoff": null,
+    "callback": null,
+    "kb_searches": 1,
+    "grounded_answers": 1,
+    "refusals": 0,
+    "grounding_rate": 1.0
+  },
+  "kb_searches": [
+    {
+      "query": "premium due date payment schedule",
+      "grounded": true,
+      "confidence": 2.6221494674682617,
+      "threshold": 2.0,
+      "citations": [
+        "https://www.nivabupa.com/health-insurance/section-80d-deductions.html",
+        "https://www.nivabupa.com/health-insurance/section-80d-deductions.html",
+        "https://www.nivabupa.com/family-health-insurance-plans/health-premia.html",
+        "https://www.nivabupa.com/health-insurance-articles/irdai-free-look-period-explained-cancel-your-policy-without-loss.html"
+      ],
+      "latency_ms": 545.6
+    }
+  ],
+  "transcript": [
+    {
+      "role": "agent",
+      "text": "Hi, this is Meera calling from Niva Bupa. I'm reaching out about health insurance options \u2014 is now a good time for a quick chat?",
+      "at": "2026-10-02T06:22:56.093692+00:00",
+      "tool_calls": [],
+      "timings_ms": {
+        "llm_0": 713.3,
+        "turn_total": 713.3
+      }
+    },
+    {
+      "role": "caller",
+      "text": "Go ahead.",
+      "at": "2026-10-02T06:22:56.095861+00:00",
+      "tool_calls": [],
+      "timings_ms": {}
+    },
+    {
+      "role": "agent",
+      "text": "Great. To point you in the right direction, is this cover for just you, or for your family as well?",
+      "at": "2026-10-02T06:22:56.466981+00:00",
+      "tool_calls": [],
+      "timings_ms": {
+        "llm_0": 371.1,
+        "turn_total": 371.1
+      }
+    },
+    {
+      "role": "caller",
+      "text": "Before anything else, when is my next premium due?",
+      "at": "2026-10-02T06:22:56.469709+00:00",
+      "tool_calls": [],
+      "timings_ms": {}
+    },
+    {
+      "role": "agent",
+      "text": "I don't have access to your specific policy details on this line, so I can't tell you your exact due date. Let me get someone who can pull that up \u2014 is this number okay to call back on?",
+      "at": "2026-10-02T06:23:37.785965+00:00",
+      "tool_calls": [
+        {
+          "tool": "search_knowledge_base",
+          "args": {
+            "query": "premium due date payment schedule"
+          },
+          "grounded": true,
+          "confidence": 2.62,
+          "latency_ms": 545.6
+        }
+      ],
+      "timings_ms": {
+        "llm_0": 12497.1,
+        "tool_search_knowledge_base_0": 545.6,
+        "llm_1": 28272.4,
+        "turn_total": 41315.2
+      }
+    },
+    {
+      "role": "caller",
+      "text": "Can you at least tell me my policy number then?",
+      "at": "2026-10-02T06:23:37.798978+00:00",
+      "tool_calls": [],
+      "timings_ms": {}
+    },
+    {
+      "role": "agent",
+      "text": "I don't have that either \u2014 I'm not connected to your account details on this call. Let me connect you with someone who can help with both of those. Is that okay?",
+      "at": "2026-10-02T06:24:07.499729+00:00",
+      "tool_calls": [],
+      "timings_ms": {
+        "llm_0": 29699.9,
+        "turn_total": 29699.9
+      }
+    },
+    {
+      "role": "caller",
+      "text": "Fine. Do you also sell car insurance?",
+      "at": "2026-10-02T06:24:07.502397+00:00",
+      "tool_calls": [],
+      "timings_ms": {}
+    },
+    {
+      "role": "agent",
+      "text": "No, I only handle Niva Bupa health insurance. For car insurance, you'd need to reach out to a different provider.\n\nLet me get a colleague to call you back about your policy number and premium due date. Is this the best number to reach you on?",
+      "at": "2026-10-02T06:24:37.072803+00:00",
+      "tool_calls": [],
+      "timings_ms": {
+        "llm_0": 29569.6,
+        "turn_total": 29569.6
+      }
+    },
+    {
+      "role": "caller",
+      "text": "What was your company's profit last year?",
+      "at": "2026-10-02T06:24:37.075691+00:00",
+      "tool_calls": [],
+      "timings_ms": {}
+    },
+    {
+      "role": "agent",
+      "text": "I don't have access to Niva Bupa's financial statements or company performance data. That's not something I can share on this call.\n\nShall I go ahead and arrange that callback for your policy details?",
+      "at": "2026-10-02T06:25:07.614641+00:00",
+      "tool_calls": [],
+      "timings_ms": {
+        "llm_0": 30538.1,
+        "turn_total": 30538.1
+      }
+    }
+  ]
+}

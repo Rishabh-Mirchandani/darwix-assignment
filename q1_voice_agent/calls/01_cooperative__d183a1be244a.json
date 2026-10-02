@@ -1,0 +1,284 @@
+{
+  "call_id": "d183a1be244a",
+  "label": "01_cooperative",
+  "model": "qwen/qwen3.8-27b",
+  "language": "en",
+  "started_at": "2026-10-02T06:29:05.915825+00:00",
+  "summary": {
+    "call_id": "d183a1be244a",
+    "started_at": "2026-10-02T06:29:05.915825+00:00",
+    "lead": {
+      "caller_name": "Unknown",
+      "city": "Pune",
+      "cover_for": "family",
+      "eldest_age": 62,
+      "existing_conditions": "Mother has high blood pressure",
+      "existing_cover": "None",
+      "members_count": 3
+    },
+    "handoff": {
+      "reason": "unanswered_question",
+      "context": "Caller asked about overseas hospitalization coverage, which I couldn't ground; wants details sent.",
+      "at": "2026-10-02T06:32:23.183338+00:00"
+    },
+    "callback": null,
+    "kb_searches": 2,
+    "grounded_answers": 1,
+    "refusals": 1,
+    "grounding_rate": 0.5
+  },
+  "kb_searches": [
+    {
+      "query": "waiting period for pre-existing condition hypertension high blood pressure",
+      "grounded": true,
+      "confidence": 5.95239782333374,
+      "threshold": 1.2,
+      "citations": [
+        "https://www.nivabupa.com/health-insurance/25-lakh-health-insurance-plans.html",
+        "https://www.nivabupa.com/health-insurance/5-lakh-health-insurance-plan.html",
+        "https://www.nivabupa.com/health-insurance/5-lakh-health-insurance-plan.html",
+        "https://www.nivabupa.com/health-insurance/bangalore.html"
+      ],
+      "latency_ms": 2695.4
+    },
+    {
+      "query": "hospitalization abroad overseas international coverage",
+      "grounded": false,
+      "confidence": 0.1568065881729126,
+      "threshold": 1.2,
+      "citations": [],
+      "latency_ms": 612.5
+    }
+  ],
+  "transcript": [
+    {
+      "role": "agent",
+      "text": "Hi, this is Meera from Niva Bupa. I'm calling about health cover for you or your family \u2014 is now a good time for a quick chat?",
+      "at": "2026-10-02T06:29:06.322587+00:00",
+      "tool_calls": [],
+      "timings_ms": {
+        "llm_0": 397.2,
+        "turn_total": 397.2
+      }
+    },
+    {
+      "role": "caller",
+      "text": "Yes, now is fine.",
+      "at": "2026-10-02T06:29:06.323675+00:00",
+      "tool_calls": [],
+      "timings_ms": {}
+    },
+    {
+      "role": "agent",
+      "text": "Great. Who are you looking to get covered \u2014 just yourself, or your family too?",
+      "at": "2026-10-02T06:29:06.590815+00:00",
+      "tool_calls": [],
+      "timings_ms": {
+        "llm_0": 267.1,
+        "turn_total": 267.1
+      }
+    },
+    {
+      "role": "caller",
+      "text": "It's for me and my wife, and my mother lives with us.",
+      "at": "2026-10-02T06:29:06.592373+00:00",
+      "tool_calls": [],
+      "timings_ms": {}
+    },
+    {
+      "role": "agent",
+      "text": "So that's three of you. How old is the eldest among the three?",
+      "at": "2026-10-02T06:29:20.953164+00:00",
+      "tool_calls": [],
+      "timings_ms": {
+        "llm_0": 14360.4,
+        "turn_total": 14360.4
+      }
+    },
+    {
+      "role": "caller",
+      "text": "My mother is the oldest, she's 62.",
+      "at": "2026-10-02T06:29:20.954140+00:00",
+      "tool_calls": [],
+      "timings_ms": {}
+    },
+    {
+      "role": "agent",
+      "text": "Thanks. Which city are you all based in?",
+      "at": "2026-10-02T06:29:35.355440+00:00",
+      "tool_calls": [],
+      "timings_ms": {
+        "llm_0": 14400.9,
+        "turn_total": 14400.9
+      }
+    },
+    {
+      "role": "caller",
+      "text": "We're in Pune.",
+      "at": "2026-10-02T06:29:35.357290+00:00",
+      "tool_calls": [],
+      "timings_ms": {}
+    },
+    {
+      "role": "agent",
+      "text": "Got it, Pune. Does anyone in the family have any existing health conditions, like diabetes or a heart issue?",
+      "at": "2026-10-02T06:30:06.883446+00:00",
+      "tool_calls": [],
+      "timings_ms": {
+        "throttle_wait_0": 31215.3,
+        "llm_0": 309.3,
+        "turn_total": 31525.3
+      }
+    },
+    {
+      "role": "caller",
+      "text": "She has high blood pressure, the rest of us are fine.",
+      "at": "2026-10-02T06:30:06.884521+00:00",
+      "tool_calls": [],
+      "timings_ms": {}
+    },
+    {
+      "role": "agent",
+      "text": "Noted. Do you or your wife have any current health cover, maybe through a job?",
+      "at": "2026-10-02T06:30:07.158220+00:00",
+      "tool_calls": [],
+      "timings_ms": {
+        "llm_0": 273.7,
+        "turn_total": 273.7
+      }
+    },
+    {
+      "role": "caller",
+      "text": "No, none of us have any cover at the moment.",
+      "at": "2026-10-02T06:30:07.159491+00:00",
+      "tool_calls": [],
+      "timings_ms": {}
+    },
+    {
+      "role": "agent",
+      "text": "I've noted your details, and a Niva Bupa advisor will reach out shortly to discuss family plans that fit your mother's needs.",
+      "at": "2026-10-02T06:30:35.950273+00:00",
+      "tool_calls": [
+        {
+          "tool": "save_lead",
+          "args": {
+            "caller_name": "Unknown",
+            "city": "Pune",
+            "cover_for": "family",
+            "eldest_age": 62,
+            "existing_conditions": "Mother has high blood pressure",
+            "existing_cover": "None",
+            "members_count": 3
+          },
+          "grounded": null,
+          "confidence": null,
+          "latency_ms": 344.6
+        }
+      ],
+      "timings_ms": {
+        "throttle_wait_0": 14043.6,
+        "llm_0": 581.8,
+        "tool_save_lead_0": 344.6,
+        "throttle_wait_1": 13475.2,
+        "llm_1": 344.0,
+        "turn_total": 28790.0
+      }
+    },
+    {
+      "role": "caller",
+      "text": "What would the waiting period be for her blood pressure?",
+      "at": "2026-10-02T06:30:35.952985+00:00",
+      "tool_calls": [],
+      "timings_ms": {}
+    },
+    {
+      "role": "agent",
+      "text": "For a pre-existing condition like high blood pressure, there's a waiting period of up to three years before related treatment is covered. Shall I have the advisor walk you through how that works for your mother's age?",
+      "at": "2026-10-02T06:31:22.395730+00:00",
+      "tool_calls": [
+        {
+          "tool": "search_knowledge_base",
+          "args": {
+            "category": "coverage_rule",
+            "query": "waiting period for pre-existing condition hypertension high blood pressure"
+          },
+          "grounded": true,
+          "confidence": null,
+          "latency_ms": 2695.5
+        }
+      ],
+      "timings_ms": {
+        "throttle_wait_0": 31180.4,
+        "llm_0": 459.5,
+        "tool_search_knowledge_base_0": 2695.5,
+        "throttle_wait_1": 11745.8,
+        "llm_1": 359.3,
+        "turn_total": 46441.5
+      }
+    },
+    {
+      "role": "caller",
+      "text": "Okay that makes sense. What happens if we need to be admitted abroad?",
+      "at": "2026-10-02T06:31:22.397634+00:00",
+      "tool_calls": [],
+      "timings_ms": {}
+    },
+    {
+      "role": "agent",
+      "text": "I don't have a clear answer on overseas hospitalization on this line. Let me get a colleague who can confirm that for you \u2014 is this number okay to reach you on?",
+      "at": "2026-10-02T06:32:08.198817+00:00",
+      "tool_calls": [
+        {
+          "tool": "search_knowledge_base",
+          "args": {
+            "category": "coverage_rule",
+            "query": "hospitalization abroad overseas international coverage"
+          },
+          "grounded": false,
+          "confidence": null,
+          "latency_ms": 612.5
+        }
+      ],
+      "timings_ms": {
+        "throttle_wait_0": 13802.6,
+        "llm_0": 406.9,
+        "tool_search_knowledge_base_0": 612.5,
+        "throttle_wait_1": 30623.7,
+        "llm_1": 353.0,
+        "turn_total": 45800.0
+      }
+    },
+    {
+      "role": "caller",
+      "text": "Alright, please go ahead and have someone send me the details.",
+      "at": "2026-10-02T06:32:08.200721+00:00",
+      "tool_calls": [],
+      "timings_ms": {}
+    },
+    {
+      "role": "agent",
+      "text": "Done \u2014 a colleague will call you back with the details on overseas coverage. Thanks for your time, and take care.",
+      "at": "2026-10-02T06:32:37.190659+00:00",
+      "tool_calls": [
+        {
+          "tool": "request_human_handoff",
+          "args": {
+            "context": "Caller asked about overseas hospitalization coverage, which I couldn't ground; wants details sent.",
+            "reason": "unanswered_question"
+          },
+          "grounded": null,
+          "confidence": null,
+          "latency_ms": 285.5
+        }
+      ],
+      "timings_ms": {
+        "throttle_wait_0": 14445.0,
+        "llm_0": 536.7,
+        "tool_request_human_handoff_0": 285.5,
+        "throttle_wait_1": 13388.9,
+        "llm_1": 331.9,
+        "turn_total": 28989.2
+      }
+    }
+  ]
+}

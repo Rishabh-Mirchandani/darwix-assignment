@@ -1,0 +1,134 @@
+{
+  "call_id": "bff19a832b31",
+  "label": "04_out_of_scope",
+  "model": "qwen/qwen3.8-27b",
+  "language": "en",
+  "started_at": "2026-10-02T06:27:50.115257+00:00",
+  "summary": {
+    "call_id": "bff19a832b31",
+    "started_at": "2026-10-02T06:27:50.115257+00:00",
+    "lead": {},
+    "handoff": {
+      "reason": "account_specific",
+      "context": "Caller asked for premium due date and policy number; also asked about car insurance (out of scope).",
+      "at": "2026-10-02T06:28:51.514191+00:00"
+    },
+    "callback": null,
+    "kb_searches": 0,
+    "grounded_answers": 0,
+    "refusals": 0,
+    "grounding_rate": null
+  },
+  "kb_searches": [],
+  "transcript": [
+    {
+      "role": "agent",
+      "text": "Hi, this is Meera from Niva Bupa. I'm calling about health cover for you or your family \u2014 is now a good time for a quick chat?",
+      "at": "2026-10-02T06:27:50.710698+00:00",
+      "tool_calls": [],
+      "timings_ms": {
+        "llm_0": 587.6,
+        "turn_total": 587.7
+      }
+    },
+    {
+      "role": "caller",
+      "text": "Go ahead.",
+      "at": "2026-10-02T06:27:50.711869+00:00",
+      "tool_calls": [],
+      "timings_ms": {}
+    },
+    {
+      "role": "agent",
+      "text": "Great. Who would you like cover for \u2014 just yourself, or your family?",
+      "at": "2026-10-02T06:27:50.962437+00:00",
+      "tool_calls": [],
+      "timings_ms": {
+        "llm_0": 250.5,
+        "turn_total": 250.5
+      }
+    },
+    {
+      "role": "caller",
+      "text": "Before anything else, when is my next premium due?",
+      "at": "2026-10-02T06:27:50.963506+00:00",
+      "tool_calls": [],
+      "timings_ms": {}
+    },
+    {
+      "role": "agent",
+      "text": "I don't have access to your policy details on this line, so I can't check that. Let me get someone who can pull that up \u2014 is this number okay for a callback?",
+      "at": "2026-10-02T06:27:51.323509+00:00",
+      "tool_calls": [],
+      "timings_ms": {
+        "llm_0": 360.0,
+        "turn_total": 360.0
+      }
+    },
+    {
+      "role": "caller",
+      "text": "Can you at least tell me my policy number then?",
+      "at": "2026-10-02T06:27:51.336933+00:00",
+      "tool_calls": [],
+      "timings_ms": {}
+    },
+    {
+      "role": "agent",
+      "text": "I don't have your policy details on this line either. Let me connect you with a colleague who can pull that up \u2014 is that okay?",
+      "at": "2026-10-02T06:27:51.618999+00:00",
+      "tool_calls": [],
+      "timings_ms": {
+        "llm_0": 282.0,
+        "turn_total": 282.0
+      }
+    },
+    {
+      "role": "caller",
+      "text": "Fine. Do you also sell car insurance?",
+      "at": "2026-10-02T06:27:51.620862+00:00",
+      "tool_calls": [],
+      "timings_ms": {}
+    },
+    {
+      "role": "agent",
+      "text": "A colleague will call you back shortly with your policy details \u2014 thanks for your patience.",
+      "at": "2026-10-02T06:28:52.561853+00:00",
+      "tool_calls": [
+        {
+          "tool": "request_human_handoff",
+          "args": {
+            "context": "Caller asked for premium due date and policy number; also asked about car insurance (out of scope).",
+            "reason": "account_specific"
+          },
+          "grounded": null,
+          "confidence": null,
+          "latency_ms": 764.3
+        }
+      ],
+      "timings_ms": {
+        "throttle_wait_0": 59339.8,
+        "llm_0": 551.4,
+        "tool_request_human_handoff_0": 764.3,
+        "llm_1": 283.2,
+        "turn_total": 60939.4
+      }
+    },
+    {
+      "role": "caller",
+      "text": "What was your company's profit last year?",
+      "at": "2026-10-02T06:28:52.563592+00:00",
+      "tool_calls": [],
+      "timings_ms": {}
+    },
+    {
+      "role": "agent",
+      "text": "I don't have that information, and it's not something I can share on this line. Your colleague will be in touch shortly with your policy details.",
+      "at": "2026-10-02T06:28:52.873833+00:00",
+      "tool_calls": [],
+      "timings_ms": {
+        "llm_0": 310.2,
+        "turn_total": 310.2
+      }
+    }
+  ]
+}

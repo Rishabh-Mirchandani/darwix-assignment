@@ -1,0 +1,131 @@
+{
+  "label": "id_01_installment_reminder",
+  "market": "id",
+  "voices": {
+    "agent": "id-ID-GadisNeural",
+    "caller": "id-ID-ArdiNeural"
+  },
+  "source_transcript": "id_01_installment_reminder__e26af196a978.json",
+  "model": "openai/gpt-oss-120b",
+  "summary": {
+    "call_id": "e26af196a978",
+    "started_at": "2026-10-02T07:11:05.370958+00:00",
+    "lead": {},
+    "handoff": {
+      "reason": "caller_requested",
+      "context": "Caller requested extension info, no data available",
+      "at": "2026-10-02T07:14:10.427220+00:00"
+    },
+    "callback": null,
+    "kb_searches": 2,
+    "grounded_answers": 1,
+    "refusals": 1,
+    "grounding_rate": 0.5
+  },
+  "turns": [
+    {
+      "index": 0,
+      "file": "000_agent.mp3",
+      "speaker": "agent",
+      "voice": "id-ID-GadisNeural",
+      "text": "Selamat pagi, Bapak/Ibu. Saya Sari dari PT Mitra Finansial pembiayaan. Mohon maaf mengganggu waktunya — apakah benar ini dengan Bapak/Ibu?",
+      "bytes": 81648
+    },
+    {
+      "index": 1,
+      "file": "001_caller.mp3",
+      "speaker": "caller",
+      "voice": "id-ID-ArdiNeural",
+      "text": "Iya betul, saya sendiri.",
+      "bytes": 16848
+    },
+    {
+      "index": 2,
+      "file": "002_agent.mp3",
+      "speaker": "agent",
+      "voice": "id-ID-GadisNeural",
+      "text": "Baik, terima kasih. Boleh saya tahu nama Bapak/Ibu untuk pencatatan?",
+      "bytes": 42192
+    },
+    {
+      "index": 3,
+      "file": "003_caller.mp3",
+      "speaker": "caller",
+      "voice": "id-ID-ArdiNeural",
+      "text": "Udah terima kok remindernya kemarin.",
+      "bytes": 16704
+    },
+    {
+      "index": 4,
+      "file": "004_agent.mp3",
+      "speaker": "agent",
+      "voice": "id-ID-GadisNeural",
+      "text": "Terima kasih, Pak/Bu. Untuk keperluan pencatatan, boleh saya catat nama lengkap Bapak/Ibu?",
+      "bytes": 51696
+    },
+    {
+      "index": 5,
+      "file": "005_caller.mp3",
+      "speaker": "caller",
+      "voice": "id-ID-ArdiNeural",
+      "text": "Nah itu dia, bulan ini agak berat. Gaji belum turun.",
+      "bytes": 31248
+    },
+    {
+      "index": 6,
+      "file": "006_agent.mp3",
+      "speaker": "agent",
+      "voice": "id-ID-GadisNeural",
+      "text": "Baik, Pak, saya mengerti kondisinya. Kira‑kira kapan Bapak berencana membayar cicilan bulan ini, dan melalui channel apa—misalnya transfer atau auto‑debit?",
+      "bytes": 80064
+    },
+    {
+      "index": 7,
+      "file": "007_caller.mp3",
+      "speaker": "caller",
+      "voice": "id-ID-ArdiNeural",
+      "text": "Kalau telat gitu dendanya gimana ya?",
+      "bytes": 17280
+    },
+    {
+      "index": 8,
+      "file": "008_agent.mp3",
+      "speaker": "agent",
+      "voice": "id-ID-GadisNeural",
+      "text": "Baik Pak, untuk keterlambatan ada denda harian yang dihitung dari nilai angsuran yang tertunggak, mulai hari pertama setelah jatuh tempo. Jika ada pertanyaan lebih lanjut, saya bisa sambungkan ke rekan saya yang dapat cek nominal pastinya.",
+      "bytes": 101952
+    },
+    {
+      "index": 9,
+      "file": "009_caller.mp3",
+      "speaker": "caller",
+      "voice": "id-ID-ArdiNeural",
+      "text": "Oh gitu. Ada keringanan gak kalau misalnya saya minta perpanjangan tenor?",
+      "bytes": 33696
+    },
+    {
+      "index": 10,
+      "file": "010_agent.mp3",
+      "speaker": "agent",
+      "voice": "id-ID-GadisNeural",
+      "text": "Mohon maaf Pak, untuk opsi perpanjangan tenor saya belum memiliki informasinya. Saya sambungkan ke rekan saya yang dapat membantu lebih detail, ya.",
+      "bytes": 71280
+    },
+    {
+      "index": 11,
+      "file": "011_caller.mp3",
+      "speaker": "caller",
+      "voice": "id-ID-ArdiNeural",
+      "text": "Oke siap, makasih ya.",
+      "bytes": 16128
+    },
+    {
+      "index": 12,
+      "file": "012_agent.mp3",
+      "speaker": "agent",
+      "voice": "id-ID-GadisNeural",
+      "text": "Baik Pak, rekan kami akan segera menghubungi Bapak kembali.",
+      "bytes": 30960
+    }
+  ]
+}

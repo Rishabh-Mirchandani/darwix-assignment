@@ -1,0 +1,155 @@
+[
+  {
+    "index": 0,
+    "file": "000_agent.mp3",
+    "speaker": "agent",
+    "text": "Good afternoon, am I speaking with Mister Sharma?",
+    "expect": null,
+    "why": "Neutral open. Note: no company identification yet.",
+    "bytes": 24048
+  },
+  {
+    "index": 1,
+    "file": "001_caller.mp3",
+    "speaker": "customer",
+    "text": "Yes, speaking.",
+    "expect": null,
+    "why": "Neutral.",
+    "bytes": 12672
+  },
+  {
+    "index": 2,
+    "file": "002_agent.mp3",
+    "speaker": "agent",
+    "text": "I'm calling about the health insurance enquiry you submitted last week. Is this a good time?",
+    "expect": "compliance_gap",
+    "why": "Agent still has not named themselves or the company. The identity disclosure deadline lapses here.",
+    "bytes": 43776
+  },
+  {
+    "index": 3,
+    "file": "003_caller.mp3",
+    "speaker": "customer",
+    "text": "Sure, go ahead.",
+    "expect": null,
+    "why": "Neutral.",
+    "bytes": 13248
+  },
+  {
+    "index": 4,
+    "file": "004_caller.mp3",
+    "speaker": "customer",
+    "text": "I should mention I have diabetes, type two, diagnosed three years ago.",
+    "expect": null,
+    "why": "Arms the waiting-period disclosure requirement but is not itself a signal.",
+    "bytes": 37872
+  },
+  {
+    "index": 5,
+    "file": "005_agent.mp3",
+    "speaker": "agent",
+    "text": "That's absolutely fine, diabetes is very common and we cover it.",
+    "expect": "compliance_gap",
+    "why": "REQUIRED: agent answered a pre-existing condition question without disclosing the waiting period. This is the brief's 'skipped disclosure' case.",
+    "bytes": 33408
+  },
+  {
+    "index": 6,
+    "file": "006_caller.mp3",
+    "speaker": "customer",
+    "text": "Okay good. My wife also needs cover, she's not insured at all right now.",
+    "expect": "missed_cross_sell",
+    "why": "REQUIRED: explicit second-life opportunity. The brief's 'missed cross-sell' case.",
+    "bytes": 43632
+  },
+  {
+    "index": 7,
+    "file": "007_agent.mp3",
+    "speaker": "agent",
+    "text": "Right, noted. So for your own policy, the premium works out to about eighteen thousand rupees a year.",
+    "expect": "compliance_gap",
+    "why": "Quotes a figure without saying it is indicative or subject to underwriting. Also ignores the cross-sell just offered.",
+    "bytes": 50976
+  },
+  {
+    "index": 8,
+    "file": "008_caller.mp3",
+    "speaker": "customer",
+    "text": "Hmm. Right. I see. Okay.",
+    "expect": null,
+    "why": "NOISE CASE: filler with no content. Must produce no nudge.",
+    "bytes": 26064
+  },
+  {
+    "index": 9,
+    "file": "009_caller.mp3",
+    "speaker": "customer",
+    "text": "Sorry, the line is a bit bad. Could you say that again?",
+    "expect": null,
+    "why": "NOISE CASE: audio trouble, not frustration. A naive sentiment detector fires here; it must not.",
+    "bytes": 31248
+  },
+  {
+    "index": 10,
+    "file": "010_caller.mp3",
+    "speaker": "customer",
+    "text": "No, I don't have a second car, it's just the one.",
+    "expect": null,
+    "why": "NOISE CASE: negated cross-sell. The phrase 'second car' appears but the answer is no. Must not fire.",
+    "bytes": 29808
+  },
+  {
+    "index": 11,
+    "file": "011_caller.mp3",
+    "speaker": "customer",
+    "text": "And I'm not frustrated, I just want to understand the numbers.",
+    "expect": null,
+    "why": "NOISE CASE: explicit negation of frustration. Must not fire.",
+    "bytes": 33264
+  },
+  {
+    "index": 12,
+    "file": "012_caller.mp3",
+    "speaker": "customer",
+    "text": "Although honestly, this is the third time I've called about this and nobody has given me a straight answer.",
+    "expect": "rising_frustration",
+    "why": "REQUIRED: genuine escalating frustration with concrete evidence. The brief's 'rising frustration' case.",
+    "bytes": 48528
+  },
+  {
+    "index": 13,
+    "file": "013_agent.mp3",
+    "speaker": "agent",
+    "text": "I understand. Let me just reassure you, your claim will definitely be approved, there's nothing to worry about.",
+    "expect": "risky_statement",
+    "why": "REQUIRED: agent guarantees a claim outcome. Compliance exposure, and the hardest case because the surrounding tone is reassuring.",
+    "bytes": 53136
+  },
+  {
+    "index": 14,
+    "file": "014_caller.mp3",
+    "speaker": "customer",
+    "text": "The thing is, I lost my job in March so money is quite tight at the moment.",
+    "expect": "payment_difficulty",
+    "why": "Genuine hardship disclosure; should route to a support option.",
+    "bytes": 39888
+  },
+  {
+    "index": 15,
+    "file": "015_caller.mp3",
+    "speaker": "customer",
+    "text": "But alright, that sounds reasonable. How do I sign up?",
+    "expect": "buying_signal",
+    "why": "Clear intent to proceed.",
+    "bytes": 33552
+  },
+  {
+    "index": 16,
+    "file": "016_agent.mp3",
+    "speaker": "agent",
+    "text": "I'll email you the proposal form today.",
+    "expect": null,
+    "why": "Neutral close.",
+    "bytes": 19296
+  }
+]

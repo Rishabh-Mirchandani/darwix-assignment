@@ -1,0 +1,115 @@
+{
+  "label": "ph_02_objection_escalation",
+  "market": "ph",
+  "voices": {
+    "agent": "fil-PH-BlessicaNeural",
+    "caller": "fil-PH-AngeloNeural"
+  },
+  "source_transcript": "ph_02_objection_escalation__60a1e7bb3b26.json",
+  "model": "openai/gpt-oss-120b",
+  "summary": {
+    "call_id": "60a1e7bb3b26",
+    "started_at": "2026-10-02T07:08:59.029942+00:00",
+    "lead": {},
+    "handoff": {
+      "reason": "account_specific",
+      "context": "Caller requests exact amount paid so far on policy",
+      "at": "2026-10-02T07:10:02.441569+00:00"
+    },
+    "callback": null,
+    "kb_searches": 1,
+    "grounded_answers": 0,
+    "refusals": 1,
+    "grounding_rate": 0.0
+  },
+  "turns": [
+    {
+      "index": 0,
+      "file": "000_agent.mp3",
+      "speaker": "agent",
+      "voice": "fil-PH-BlessicaNeural",
+      "text": "Magandang umaga po, si Let po ito from [bank] bancassurance. Tumatawag po ako tungkol sa inyong policy. May time po ba kayo for a few minutes?",
+      "bytes": 64512
+    },
+    {
+      "index": 1,
+      "file": "001_caller.mp3",
+      "speaker": "caller",
+      "voice": "fil-PH-AngeloNeural",
+      "text": "Oo, bakit po?",
+      "bytes": 11232
+    },
+    {
+      "index": 2,
+      "file": "002_agent.mp3",
+      "speaker": "agent",
+      "voice": "fil-PH-BlessicaNeural",
+      "text": "Salamat po, Sir/Ma'am. Pwede ko po bang makumpirma kung kayo po ang policyholder ng inyong insurance?",
+      "bytes": 43344
+    },
+    {
+      "index": 3,
+      "file": "003_caller.mp3",
+      "speaker": "caller",
+      "voice": "fil-PH-AngeloNeural",
+      "text": "Ang mahal naman po kasi ng premium, gusto ko na po itigil.",
+      "bytes": 23184
+    },
+    {
+      "index": 4,
+      "file": "004_agent.mp3",
+      "speaker": "agent",
+      "voice": "fil-PH-BlessicaNeural",
+      "text": "Naiintindihan ko po, Sir/Ma'am. Wala po akong exact na detalye tungkol diyan ngayon, pero ipapasa ko po kayo sa colleague namin na makakatulong sa inyo. Okay po ba?",
+      "bytes": 69984
+    },
+    {
+      "index": 5,
+      "file": "005_caller.mp3",
+      "speaker": "caller",
+      "voice": "fil-PH-AngeloNeural",
+      "text": "Magkano po ba exactly ang nabayaran ko na so far?",
+      "bytes": 21024
+    },
+    {
+      "index": 6,
+      "file": "006_agent.mp3",
+      "speaker": "agent",
+      "voice": "fil-PH-BlessicaNeural",
+      "text": "Pasensya po, wala po akong access sa exact na balance o payment history ninyo dito sa linya. Ipapasa ko po kayo sa colleague namin na makakatingin niyan — okay lang po ba?",
+      "bytes": 66384
+    },
+    {
+      "index": 7,
+      "file": "007_caller.mp3",
+      "speaker": "caller",
+      "voice": "fil-PH-AngeloNeural",
+      "text": "Eh gusto ko po talaga malaman. Pakiusap po.",
+      "bytes": 24768
+    },
+    {
+      "index": 8,
+      "file": "008_agent.mp3",
+      "speaker": "agent",
+      "voice": "fil-PH-BlessicaNeural",
+      "text": "Sige po, ipapasa ko po kayo sa colleague namin para matulungan kayo sa eksaktong halagang nabayaran na po ninyo.",
+      "bytes": 42192
+    },
+    {
+      "index": 9,
+      "file": "009_caller.mp3",
+      "speaker": "caller",
+      "voice": "fil-PH-AngeloNeural",
+      "text": "Sige po, pwede po ba akong makausap ng tao?",
+      "bytes": 21024
+    },
+    {
+      "index": 10,
+      "file": "010_agent.mp3",
+      "speaker": "agent",
+      "voice": "fil-PH-BlessicaNeural",
+      "text": "Opo, ipapasa ko po kayo sa colleague namin at siya po ang tatawag sa inyo agad.",
+      "bytes": 32688
+    }
+  ]
+}

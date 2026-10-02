@@ -1,0 +1,134 @@
+[
+  {
+    "label": "01_cooperative",
+    "requirement": "Cooperative customer",
+    "passed": true,
+    "failures": [],
+    "transcript": "01_cooperative__d183a1be244a.json",
+    "summary": {
+      "call_id": "d183a1be244a",
+      "started_at": "2026-10-02T06:29:05.915825+00:00",
+      "lead": {
+        "caller_name": "Unknown",
+        "city": "Pune",
+        "cover_for": "family",
+        "eldest_age": 62,
+        "existing_conditions": "Mother has high blood pressure",
+        "existing_cover": "None",
+        "members_count": 3
+      },
+      "handoff": {
+        "reason": "unanswered_question",
+        "context": "Caller asked about overseas hospitalization coverage, which I couldn't ground; wants details sent.",
+        "at": "2026-10-02T06:32:23.183338+00:00"
+      },
+      "callback": null,
+      "kb_searches": 2,
+      "grounded_answers": 1,
+      "refusals": 1,
+      "grounding_rate": 0.5
+    }
+  },
+  {
+    "label": "02_objection",
+    "requirement": "Objection handling, grounded",
+    "passed": true,
+    "failures": [],
+    "transcript": "02_objection__40a719e324b6.json",
+    "summary": {
+      "call_id": "40a719e324b6",
+      "started_at": "2026-10-02T06:32:37.728306+00:00",
+      "lead": {},
+      "handoff": null,
+      "callback": null,
+      "kb_searches": 4,
+      "grounded_answers": 4,
+      "refusals": 0,
+      "grounding_rate": 1.0
+    }
+  },
+  {
+    "label": "03_conflicting_details",
+    "requirement": "Incomplete or conflicting details",
+    "passed": true,
+    "failures": [],
+    "transcript": "03_conflicting_details__68f87603dbb8.json",
+    "summary": {
+      "call_id": "68f87603dbb8",
+      "started_at": "2026-10-02T06:35:03.805990+00:00",
+      "lead": {},
+      "handoff": null,
+      "callback": null,
+      "kb_searches": 0,
+      "grounded_answers": 0,
+      "refusals": 0,
+      "grounding_rate": null
+    }
+  },
+  {
+    "label": "04_out_of_scope",
+    "requirement": "Out-of-scope question + safe fallback",
+    "passed": true,
+    "failures": [],
+    "transcript": "04_out_of_scope__ccb221555e94.json",
+    "summary": {
+      "call_id": "ccb221555e94",
+      "started_at": "2026-10-02T06:37:01.119155+00:00",
+      "lead": {},
+      "handoff": {
+        "reason": "account_specific",
+        "context": "Caller asked for next premium due date and policy number; account-specific details.",
+        "at": "2026-10-02T06:37:54.836331+00:00"
+      },
+      "callback": null,
+      "kb_searches": 0,
+      "grounded_answers": 0,
+      "refusals": 0,
+      "grounding_rate": null
+    }
+  },
+  {
+    "label": "05_human_request",
+    "requirement": "Human-assistance request",
+    "passed": true,
+    "failures": [],
+    "transcript": "05_human_request__b47f833f2b26.json",
+    "summary": {
+      "call_id": "b47f833f2b26",
+      "started_at": "2026-10-02T06:38:42.348068+00:00",
+      "lead": {},
+      "handoff": {
+        "reason": "caller_requested",
+        "context": "Caller wants a human agent; was qualifying for father aged 71.",
+        "at": "2026-10-02T06:39:38.299379+00:00"
+      },
+      "callback": null,
+      "kb_searches": 0,
+      "grounded_answers": 0,
+      "refusals": 0,
+      "grounding_rate": null
+    }
+  },
+  {
+    "label": "06_mixed_pressure",
+    "requirement": "Combined: objection -> unanswerable -> escalation",
+    "passed": true,
+    "failures": [],
+    "transcript": "06_mixed_pressure__b29c156726ca.json",
+    "summary": {
+      "call_id": "b29c156726ca",
+      "started_at": "2026-10-02T06:39:56.610798+00:00",
+      "lead": {},
+      "handoff": {
+        "reason": "caller_requested",
+        "context": "Caller explicitly asks to be put through to a human who knows IVF coverage details.",
+        "at": "2026-10-02T06:41:53.892830+00:00"
+      },
+      "callback": null,
+      "kb_searches": 1,
+      "grounded_answers": 0,
+      "refusals": 1,
+      "grounding_rate": 0.0
+    }
+  }
+]

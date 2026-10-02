@@ -1,0 +1,131 @@
+{
+  "label": "ph_01_premium_reminder",
+  "market": "ph",
+  "voices": {
+    "agent": "fil-PH-BlessicaNeural",
+    "caller": "fil-PH-AngeloNeural"
+  },
+  "source_transcript": "ph_01_premium_reminder__a6e6c81c5e0b.json",
+  "model": "qwen/qwen3.8-27b",
+  "summary": {
+    "call_id": "a6e6c81c5e0b",
+    "started_at": "2026-10-02T07:02:11.838823+00:00",
+    "lead": {},
+    "handoff": {
+      "reason": "unanswered_question",
+      "context": "Client (Mr. Santos) wants to change his beneficiary; I had no grounded info so I offered a colleague callback.",
+      "at": "2026-10-02T07:06:15.368456+00:00"
+    },
+    "callback": null,
+    "kb_searches": 2,
+    "grounded_answers": 1,
+    "refusals": 1,
+    "grounding_rate": 0.5
+  },
+  "turns": [
+    {
+      "index": 0,
+      "file": "000_agent.mp3",
+      "speaker": "agent",
+      "voice": "fil-PH-BlessicaNeural",
+      "text": "Magandang umaga po, si Let po ito from BPI bancassurance. Tumatawag po ako tungkol sa inyong life insurance policy. May time po ba kayo for a few minutes?",
+      "bytes": 68112
+    },
+    {
+      "index": 1,
+      "file": "001_caller.mp3",
+      "speaker": "caller",
+      "voice": "fil-PH-AngeloNeural",
+      "text": "Opo, ako nga po si Mister Santos.",
+      "bytes": 18144
+    },
+    {
+      "index": 2,
+      "file": "002_agent.mp3",
+      "speaker": "agent",
+      "voice": "fil-PH-BlessicaNeural",
+      "text": "Opo, Mr. Santos, salamat po. May upcoming premium due date po kayo, so I wanted to confirm kung na-receive po ba ninyo yung notice for the payment?",
+      "bytes": 60768
+    },
+    {
+      "index": 3,
+      "file": "003_caller.mp3",
+      "speaker": "caller",
+      "voice": "fil-PH-AngeloNeural",
+      "text": "Ay oo, nakatanggap po ako ng notice last week.",
+      "bytes": 19296
+    },
+    {
+      "index": 4,
+      "file": "004_agent.mp3",
+      "speaker": "agent",
+      "voice": "fil-PH-BlessicaNeural",
+      "text": "Salamat po, Mr. Santos. Anong preferred payment channel po ninyo — bank, GCash, over-the-counter, o auto-debit?",
+      "bytes": 54000
+    },
+    {
+      "index": 5,
+      "file": "005_caller.mp3",
+      "speaker": "caller",
+      "voice": "fil-PH-AngeloNeural",
+      "text": "Sa BDO po ako nagbabayad, over the counter.",
+      "bytes": 20304
+    },
+    {
+      "index": 6,
+      "file": "006_agent.mp3",
+      "speaker": "agent",
+      "voice": "fil-PH-BlessicaNeural",
+      "text": "Sige po, BDO over the counter. May bagong sitwasyon po ba kayo — new baby, marriage, o iba pa — na aapektuhan nito ang beneficiary ninyo?",
+      "bytes": 61488
+    },
+    {
+      "index": 7,
+      "file": "007_caller.mp3",
+      "speaker": "caller",
+      "voice": "fil-PH-AngeloNeural",
+      "text": "Teka po, baka mag-lapse na po yung akin? Nahuli po kasi ako ng bayad.",
+      "bytes": 33264
+    },
+    {
+      "index": 8,
+      "file": "008_agent.mp3",
+      "speaker": "agent",
+      "voice": "fil-PH-BlessicaNeural",
+      "text": "Huwag po muna kayong mag-alala, Mr. Santos. May 30 days po kayong grace period from the due date, so active pa rin po ang policy ninyo within that period. Gusto po ninyong i-check ko kung kailan exactly yung due date ninyo?",
+      "bytes": 88128
+    },
+    {
+      "index": 9,
+      "file": "009_caller.mp3",
+      "speaker": "caller",
+      "voice": "fil-PH-AngeloNeural",
+      "text": "Ah okay po. Tapos yung beneficiary ko po, pwede ko pa po bang palitan?",
+      "bytes": 33264
+    },
+    {
+      "index": 10,
+      "file": "010_agent.mp3",
+      "speaker": "agent",
+      "voice": "fil-PH-BlessicaNeural",
+      "text": "Wala po akong exact detail diyan, Sir. Ipapasa ko po kayo sa colleague ko na makakapag-update ng beneficiary ninyo — okay lang po ba itong number ninyo for callback?",
+      "bytes": 63360
+    },
+    {
+      "index": 11,
+      "file": "011_caller.mp3",
+      "speaker": "caller",
+      "voice": "fil-PH-AngeloNeural",
+      "text": "Sige po, salamat.",
+      "bytes": 12672
+    },
+    {
+      "index": 12,
+      "file": "012_agent.mp3",
+      "speaker": "agent",
+      "voice": "fil-PH-BlessicaNeural",
+      "text": "Salamat po, Sir. Ipa-call po na kayo ng colleague ko para sa beneficiary update.",
+      "bytes": 37584
+    }
+  ]
+}

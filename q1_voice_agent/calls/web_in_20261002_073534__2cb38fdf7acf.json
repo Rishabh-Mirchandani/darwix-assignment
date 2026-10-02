@@ -1,0 +1,65 @@
+{
+  "call_id": "2cb38fdf7acf",
+  "label": "web_in_20261002_073534",
+  "model": "qwen/qwen3.8-27b",
+  "language": "en",
+  "started_at": "2026-10-02T07:34:07.087892+00:00",
+  "summary": {
+    "call_id": "2cb38fdf7acf",
+    "started_at": "2026-10-02T07:34:07.087892+00:00",
+    "lead": {},
+    "handoff": null,
+    "callback": null,
+    "kb_searches": 0,
+    "grounded_answers": 0,
+    "refusals": 0,
+    "grounding_rate": null
+  },
+  "kb_searches": [],
+  "transcript": [
+    {
+      "role": "agent",
+      "text": "Hi, this is Meera calling from Niva Bupa. I'm reaching out about health cover for you or your family. Is now a good time for a quick chat?",
+      "at": "2026-10-02T07:34:07.535445+00:00",
+      "tool_calls": [],
+      "timings_ms": {
+        "llm_0": 414.9,
+        "turn_total": 415.0
+      }
+    },
+    {
+      "role": "caller",
+      "text": "Thank you.",
+      "at": "2026-10-02T07:34:23.200233+00:00",
+      "tool_calls": [],
+      "timings_ms": {}
+    },
+    {
+      "role": "agent",
+      "text": "You're welcome. So, who are you looking to get cover for \u2014 just yourself, or your family too?",
+      "at": "2026-10-02T07:34:23.505884+00:00",
+      "tool_calls": [],
+      "timings_ms": {
+        "llm_0": 305.6,
+        "turn_total": 305.6
+      }
+    },
+    {
+      "role": "caller",
+      "text": "I'm like, what are you doing? I'm giving you the voice. I'm just going to say, what are you doing? I'm going to say, what are you doing? No, that's not it. It's not my internet. I'm not going to say, what are you doing? I'm going to say, what are you doing?",
+      "at": "2026-10-02T07:34:39.957780+00:00",
+      "tool_calls": [],
+      "timings_ms": {}
+    },
+    {
+      "role": "agent",
+      "text": "No worries at all \u2014 sounds like the connection's a bit glitchy. Would you like me to call you back at a better time, or shall we try again now?",
+      "at": "2026-10-02T07:35:32.637051+00:00",
+      "tool_calls": [],
+      "timings_ms": {
+        "llm_0": 52678.9,
+        "turn_total": 52678.9
+      }
+    }
+  ]
+}

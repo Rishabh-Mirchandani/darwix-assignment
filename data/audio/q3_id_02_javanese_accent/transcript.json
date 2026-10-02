@@ -1,0 +1,115 @@
+{
+  "label": "id_02_javanese_accent",
+  "market": "id",
+  "voices": {
+    "agent": "id-ID-GadisNeural",
+    "caller": "id-ID-ArdiNeural"
+  },
+  "source_transcript": "id_02_javanese_accent__4162ac3713d9.json",
+  "model": "openai/gpt-oss-120b",
+  "summary": {
+    "call_id": "4162ac3713d9",
+    "started_at": "2026-10-02T07:14:30.597867+00:00",
+    "lead": {},
+    "handoff": {
+      "reason": "caller_requested",
+      "context": "User requested to speak with a human representative",
+      "at": "2026-10-02T07:16:35.492515+00:00"
+    },
+    "callback": null,
+    "kb_searches": 1,
+    "grounded_answers": 1,
+    "refusals": 0,
+    "grounding_rate": 1.0
+  },
+  "turns": [
+    {
+      "index": 0,
+      "file": "000_agent.mp3",
+      "speaker": "agent",
+      "voice": "id-ID-GadisNeural",
+      "text": "Selamat pagi, Bapak/Ibu. Saya Sari dari PT. Maju Sejahtera Pembiayaan. Mohon maaf mengganggu waktunya, apakah benar ini dengan Bapak/Ibu?",
+      "bytes": 81936
+    },
+    {
+      "index": 1,
+      "file": "001_caller.mp3",
+      "speaker": "caller",
+      "voice": "id-ID-ArdiNeural",
+      "text": "Nggih, leres. Kulo piyambak.",
+      "bytes": 25632
+    },
+    {
+      "index": 2,
+      "file": "002_agent.mp3",
+      "speaker": "agent",
+      "voice": "id-ID-GadisNeural",
+      "text": "Terima kasih, Pak. Boleh saya tahu nama Bapak untuk pencatatan?",
+      "bytes": 39024
+    },
+    {
+      "index": 3,
+      "file": "003_caller.mp3",
+      "speaker": "caller",
+      "voice": "id-ID-ArdiNeural",
+      "text": "Mboten, dereng nampi remindere Mbak.",
+      "bytes": 19152
+    },
+    {
+      "index": 4,
+      "file": "004_agent.mp3",
+      "speaker": "agent",
+      "voice": "id-ID-GadisNeural",
+      "text": "Baik, Pak. Apakah Bapak memiliki rencana untuk melakukan pembayaran cicilan dalam beberapa hari ke depan?",
+      "bytes": 54144
+    },
+    {
+      "index": 5,
+      "file": "005_caller.mp3",
+      "speaker": "caller",
+      "voice": "id-ID-ArdiNeural",
+      "text": "Nggih niku, kulo tasih bingung kaliyan dendane. Kok katah sanget nggih?",
+      "bytes": 34416
+    },
+    {
+      "index": 6,
+      "file": "006_agent.mp3",
+      "speaker": "agent",
+      "voice": "id-ID-GadisNeural",
+      "text": "Baik, Pak. Untuk keterlambatan ada denda harian yang dihitung dari nilai angsuran yang tertunggak, jadi semakin lama keterlambatannya, denda akan bertambah. Apakah Bapak ingin saya cek berapa denda yang terakumulasi untuk cicilan Bapak?",
+      "bytes": 109008
+    },
+    {
+      "index": 7,
+      "file": "007_caller.mp3",
+      "speaker": "caller",
+      "voice": "id-ID-ArdiNeural",
+      "text": "Monggo dijelaske malih, kulo mboten paham.",
+      "bytes": 21312
+    },
+    {
+      "index": 8,
+      "file": "008_agent.mp3",
+      "speaker": "agent",
+      "voice": "id-ID-GadisNeural",
+      "text": "Pak, denda yang dikenakan adalah denda harian yang dihitung dari nilai angsuran yang belum dibayar, mulai dari hari pertama setelah tanggal jatuh tempo; semakin lama pembayaran tertunda, denda akan terus bertambah. Apakah Bapak ingin saya cek berapa total denda yang sudah terakumulasi untuk cicilan Bapak?",
+      "bytes": 127008
+    },
+    {
+      "index": 9,
+      "file": "009_caller.mp3",
+      "speaker": "caller",
+      "voice": "id-ID-ArdiNeural",
+      "text": "Nggih sampun, kulo pengin ngendikan kaliyan petugase mawon.",
+      "bytes": 24768
+    },
+    {
+      "index": 10,
+      "file": "010_agent.mp3",
+      "speaker": "agent",
+      "voice": "id-ID-GadisNeural",
+      "text": "Baik, Pak, saya sambungkan ke rekan kami yang akan menghubungi Bapak kembali.",
+      "bytes": 38592
+    }
+  ]
+}

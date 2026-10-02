@@ -1,0 +1,360 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Voice Agent</title>
+<style>
+  :root {
+    --bg: #0f1115; --panel: #171a21; --line: #262b35;
+    --text: #e6e8ec; --dim: #8b93a3; --accent: #4f9cf9;
+    --good: #3fb950; --warn: #d29922; --bad: #f85149;
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0; background: var(--bg); color: var(--text);
+    font: 15px/1.55 ui-sans-serif, system-ui, -apple-system, "Segoe UI", sans-serif;
+    display: flex; flex-direction: column; height: 100vh;
+  }
+  header {
+    padding: 14px 20px; border-bottom: 1px solid var(--line);
+    display: flex; align-items: center; gap: 14px; flex-wrap: wrap;
+  }
+  h1 { font-size: 15px; margin: 0; font-weight: 600; }
+  .pill {
+    font-size: 12px; padding: 3px 9px; border-radius: 999px;
+    border: 1px solid var(--line); color: var(--dim);
+  }
+  .pill.live { color: var(--good); border-color: var(--good); }
+  .pill.bad  { color: var(--bad);  border-color: var(--bad); }
+  main { flex: 1; display: flex; min-height: 0; }
+  #log { flex: 1; overflow-y: auto; padding: 20px; }
+  #side {
+    width: 330px; border-left: 1px solid var(--line); padding: 16px 18px;
+    overflow-y: auto; background: var(--panel);
+  }
+  .msg { margin-bottom: 16px; max-width: 70ch; }
+  .who { font-size: 11px; letter-spacing: .08em; text-transform: uppercase;
+         color: var(--dim); margin-bottom: 4px; }
+  .agent .who { color: var(--accent); }
+  .bubble { background: var(--panel); border: 1px solid var(--line);
+            border-radius: 10px; padding: 10px 13px; }
+  .agent .bubble { border-color: #27405f; }
+  .meta { font-size: 11px; color: var(--dim); margin-top: 5px;
+          font-family: ui-monospace, Menlo, Consolas, monospace; }
+  .tool { font-size: 11px; font-family: ui-monospace, Menlo, Consolas, monospace;
+          color: var(--dim); margin-top: 5px; padding-left: 10px;
+          border-left: 2px solid var(--line); }
+  .tool .ok   { color: var(--good); }
+  .tool .no   { color: var(--warn); }
+  footer {
+    padding: 14px 20px; border-top: 1px solid var(--line);
+    display: flex; align-items: center; gap: 14px; flex-wrap: wrap;
+  }
+  button {
+    font: inherit; font-weight: 600; padding: 9px 18px; border-radius: 8px;
+    border: 1px solid var(--line); background: #1e2430; color: var(--text);
+    cursor: pointer;
+  }
+  button:hover:not(:disabled) { border-color: var(--accent); }
+  button:disabled { opacity: .45; cursor: not-allowed; }
+  button.primary { background: var(--accent); border-color: var(--accent); color: #06101f; }
+  button.danger  { background: #3d1d1d; border-color: #5f2b2b; color: #ffb4ad; }
+  #level { width: 130px; height: 6px; background: var(--line);
+           border-radius: 3px; overflow: hidden; }
+  #levelBar { height: 100%; width: 0%; background: var(--good); transition: width .07s; }
+  #hint { font-size: 12px; color: var(--dim); }
+  h2 { font-size: 11px; letter-spacing: .08em; text-transform: uppercase;
+       color: var(--dim); margin: 0 0 8px; font-weight: 600; }
+  .stat { display: flex; justify-content: space-between; font-size: 12px;
+          padding: 3px 0; font-family: ui-monospace, Menlo, Consolas, monospace; }
+  .stat span:last-child { color: var(--text); }
+  .stat span:first-child { color: var(--dim); }
+  hr { border: 0; border-top: 1px solid var(--line); margin: 16px 0; }
+  .empty { color: var(--dim); font-size: 13px; }
+</style>
+</head>
+<body>
+
+<header>
+  <h1>Health Insurance Voice Agent</h1>
+  <span class="pill" id="status">idle</span>
+  <span class="pill" id="callId"></span>
+  <span class="pill" id="kbPill">KB ?</span>
+</header>
+
+<main>
+  <div id="log">
+    <p class="empty">Press <strong>Start call</strong> and allow microphone access.
+    The agent speaks first. Just talk normally — it detects when you stop.</p>
+  </div>
+  <aside id="side">
+    <h2>Latency (last turn)</h2>
+    <div class="stat"><span>ASR</span><span id="sAsr">—</span></div>
+    <div class="stat"><span>Agent + KB</span><span id="sLlm">—</span></div>
+    <div class="stat"><span>TTS</span><span id="sTts">—</span></div>
+    <div class="stat"><span>Total</span><span id="sTotal">—</span></div>
+    <hr>
+    <h2>Call totals</h2>
+    <div class="stat"><span>Turns</span><span id="sTurns">0</span></div>
+    <div class="stat"><span>KB searches</span><span id="sSearch">0</span></div>
+    <div class="stat"><span>Grounded</span><span id="sGrounded">0</span></div>
+    <div class="stat"><span>Refused</span><span id="sRefused">0</span></div>
+    <hr>
+    <h2>Mic</h2>
+    <div class="stat"><span>Silence cutoff</span><span>900 ms</span></div>
+    <div class="stat"><span>State</span><span id="sMic">—</span></div>
+  </aside>
+</main>
+
+<footer>
+  <button class="primary" id="btnStart">Start call</button>
+  <button class="danger" id="btnEnd" disabled>End call</button>
+  <div id="level"><div id="levelBar"></div></div>
+  <span id="hint">Mic idle</span>
+</footer>
+
+<script>
+// ---------------------------------------------------------------------------
+// Turn-taking uses a simple energy VAD rather than push-to-talk, because the
+// point of the exercise is a call that feels like a call. Thresholds are
+// conservative: a false trigger costs one wasted ASR request, while cutting a
+// caller off mid-sentence corrupts the turn entirely.
+// ---------------------------------------------------------------------------
+const SILENCE_MS      = 900;   // how long quiet must persist to end a turn
+const MIN_SPEECH_MS   = 350;   // ignore coughs, clicks, door slams
+const SPEECH_RMS      = 0.015; // above this counts as speech
+const MAX_TURN_MS     = 20000; // hard stop; nobody monologues at a bot
+
+let ws, stream, recorder, audioCtx, analyser;
+let chunks = [], speaking = false, speechStart = 0, lastVoice = 0;
+let vadTimer = null, active = false, agentPlaying = false;
+let turns = 0, searches = 0, grounded = 0, refused = 0;
+
+const $ = (id) => document.getElementById(id);
+const log = $('log');
+
+function setStatus(text, cls = '') {
+  const el = $('status'); el.textContent = text;
+  el.className = 'pill' + (cls ? ' ' + cls : '');
+}
+
+function addMessage(who, text, cls) {
+  if (log.querySelector('.empty')) log.innerHTML = '';
+  const div = document.createElement('div');
+  div.className = 'msg ' + (cls || '');
+  div.innerHTML = `<div class="who">${who}</div><div class="bubble"></div>`;
+  div.querySelector('.bubble').textContent = text;
+  log.appendChild(div);
+  log.scrollTop = log.scrollHeight;
+  return div;
+}
+
+function addMeta(node, text) {
+  const m = document.createElement('div');
+  m.className = 'meta'; m.textContent = text;
+  node.appendChild(m); log.scrollTop = log.scrollHeight;
+}
+
+function addTools(node, tools) {
+  (tools || []).forEach(t => {
+    const d = document.createElement('div');
+    d.className = 'tool';
+    const state = t.grounded === true
+      ? '<span class="ok">grounded</span>'
+      : (t.grounded === false ? '<span class="no">not in KB</span>' : 'ok');
+    const q = t.args && t.args.query ? ` "${t.args.query}"` : '';
+    d.innerHTML = `${t.tool}${q} → ${state} · ${t.latency_ms}ms`;
+    node.appendChild(d);
+    if (t.tool === 'search_knowledge_base') {
+      searches++;
+      if (t.grounded === true) grounded++;
+      if (t.grounded === false) refused++;
+    }
+  });
+  $('sSearch').textContent = searches;
+  $('sGrounded').textContent = grounded;
+  $('sRefused').textContent = refused;
+  log.scrollTop = log.scrollHeight;
+}
+
+async function startCall() {
+  try {
+    stream = await navigator.mediaDevices.getUserMedia({
+      audio: { echoCancellation: true, noiseSuppression: true, autoGainControl: true }
+    });
+  } catch (e) {
+    setStatus('mic denied', 'bad');
+    addMessage('system', 'Microphone access was denied. The call cannot start.');
+    return;
+  }
+
+  const proto = location.protocol === 'https:' ? 'wss' : 'ws';
+  ws = new WebSocket(`${proto}://${location.host}/ws/call?market=in`);
+  ws.binaryType = 'arraybuffer';
+
+  ws.onopen = () => { setStatus('connecting', ''); };
+  ws.onclose = () => { setStatus('ended'); stopMic(); };
+  ws.onerror = () => { setStatus('socket error', 'bad'); };
+  ws.onmessage = (ev) => handleServer(JSON.parse(ev.data));
+
+  $('btnStart').disabled = true;
+  $('btnEnd').disabled = false;
+  active = true;
+}
+
+function handleServer(msg) {
+  if (msg.type === 'connected') {
+    setStatus('live', 'live');
+    $('callId').textContent = msg.call_id;
+    $('kbPill').textContent = 'KB connected';
+    $('kbPill').className = 'pill live';
+    startMic();
+  }
+  else if (msg.type === 'caller') {
+    const n = addMessage('you', msg.text);
+    if (msg.timings) addMeta(n, `asr ${msg.timings.asr_ms}ms`);
+  }
+  else if (msg.type === 'agent') {
+    turns++; $('sTurns').textContent = turns;
+    const n = addMessage('agent', msg.text, 'agent');
+    if (msg.tools) addTools(n, msg.tools);
+    const t = msg.timings || {};
+    if (t.total_ms) {
+      addMeta(n, `asr ${t.asr_ms}ms · agent ${t.llm_ms}ms · tts ${t.tts_ms}ms · total ${t.total_ms}ms`);
+      $('sAsr').textContent = t.asr_ms + ' ms';
+      $('sLlm').textContent = t.llm_ms + ' ms';
+      $('sTts').textContent = t.tts_ms + ' ms';
+      $('sTotal').textContent = t.total_ms + ' ms';
+    }
+    if (msg.audio) playAgent(msg.audio);
+  }
+  else if (msg.type === 'ignored') {
+    $('hint').textContent = 'ignored: ' + msg.reason;
+  }
+  else if (msg.type === 'error') {
+    setStatus('error', 'bad');
+    addMessage('system', msg.message);
+  }
+}
+
+function playAgent(b64) {
+  // Mic stays open but VAD is suppressed while the agent speaks, so its own
+  // voice cannot trigger a caller turn through the speakers.
+  agentPlaying = true;
+  $('sMic').textContent = 'agent speaking';
+  const bytes = Uint8Array.from(atob(b64), c => c.charCodeAt(0));
+  const url = URL.createObjectURL(new Blob([bytes], { type: 'audio/mpeg' }));
+  const audio = new Audio(url);
+  audio.onended = () => {
+    agentPlaying = false;
+    URL.revokeObjectURL(url);
+    $('sMic').textContent = 'listening';
+    $('hint').textContent = 'Listening…';
+  };
+  audio.play().catch(() => { agentPlaying = false; });
+}
+
+function startMic() {
+  audioCtx = new (window.AudioContext || window.webkitAudioContext)();
+  const src = audioCtx.createMediaStreamSource(stream);
+  analyser = audioCtx.createAnalyser();
+  analyser.fftSize = 1024;
+  src.connect(analyser);
+  const buf = new Float32Array(analyser.fftSize);
+
+  recorder = new MediaRecorder(stream, { mimeType: pickMime() });
+  recorder.ondataavailable = (e) => { if (e.data.size) chunks.push(e.data); };
+  recorder.onstop = flushTurn;
+
+  $('sMic').textContent = 'listening';
+  $('hint').textContent = 'Listening…';
+
+  vadTimer = setInterval(() => {
+    analyser.getFloatTimeDomainData(buf);
+    let sum = 0;
+    for (let i = 0; i < buf.length; i++) sum += buf[i] * buf[i];
+    const rms = Math.sqrt(sum / buf.length);
+    $('levelBar').style.width = Math.min(100, rms * 900) + '%';
+
+    if (agentPlaying) return;           // never listen over the agent
+    const now = performance.now();
+
+    if (rms > SPEECH_RMS) {
+      lastVoice = now;
+      if (!speaking) {
+        speaking = true; speechStart = now; chunks = [];
+        recorder.start();
+        $('sMic').textContent = 'hearing you';
+        $('hint').textContent = 'Speaking…';
+      }
+    } else if (speaking) {
+      const quietFor = now - lastVoice;
+      const spoke = lastVoice - speechStart;
+      if (quietFor > SILENCE_MS) {
+        if (spoke < MIN_SPEECH_MS) {    // too brief to be an utterance
+          speaking = false; chunks = [];
+          if (recorder.state === 'recording') recorder.stop();
+          $('sMic').textContent = 'listening';
+          return;
+        }
+        speaking = false;
+        if (recorder.state === 'recording') recorder.stop();
+      }
+    }
+    if (speaking && now - speechStart > MAX_TURN_MS) {
+      speaking = false;
+      if (recorder.state === 'recording') recorder.stop();
+    }
+  }, 50);
+}
+
+function flushTurn() {
+  if (!chunks.length || !active) { chunks = []; return; }
+  const blob = new Blob(chunks, { type: recorder.mimeType });
+  chunks = [];
+  $('sMic').textContent = 'thinking';
+  $('hint').textContent = 'Processing…';
+  blob.arrayBuffer().then(b => {
+    if (ws && ws.readyState === WebSocket.OPEN) ws.send(b);
+  });
+}
+
+function pickMime() {
+  const options = ['audio/webm;codecs=opus', 'audio/webm', 'audio/ogg;codecs=opus'];
+  for (const m of options) if (MediaRecorder.isTypeSupported(m)) return m;
+  return '';
+}
+
+function stopMic() {
+  active = false;
+  if (vadTimer) clearInterval(vadTimer);
+  if (recorder && recorder.state === 'recording') recorder.stop();
+  if (stream) stream.getTracks().forEach(t => t.stop());
+  if (audioCtx) audioCtx.close().catch(() => {});
+  $('btnStart').disabled = false;
+  $('btnEnd').disabled = true;
+  $('sMic').textContent = 'off';
+  $('hint').textContent = 'Call ended';
+  $('levelBar').style.width = '0%';
+}
+
+function endCall() {
+  if (ws && ws.readyState === WebSocket.OPEN) {
+    ws.send(JSON.stringify({ type: 'hangup' }));
+    ws.close();
+  }
+  stopMic();
+  setStatus('ended');
+}
+
+$('btnStart').onclick = startCall;
+$('btnEnd').onclick = endCall;
+
+fetch('/health').then(r => r.json()).then(h => {
+  $('kbPill').textContent = h.retrieval_api ? 'KB ready' : 'KB OFFLINE';
+  $('kbPill').className = 'pill ' + (h.retrieval_api ? 'live' : 'bad');
+}).catch(() => {});
+</script>
+</body>
+</html>

@@ -1,0 +1,203 @@
+{
+  "call_id": "e26af196a978",
+  "label": "id_01_installment_reminder",
+  "model": "openai/gpt-oss-120b",
+  "language": "id",
+  "started_at": "2026-10-02T07:11:05.370958+00:00",
+  "summary": {
+    "call_id": "e26af196a978",
+    "started_at": "2026-10-02T07:11:05.370958+00:00",
+    "lead": {},
+    "handoff": {
+      "reason": "caller_requested",
+      "context": "Caller requested extension info, no data available",
+      "at": "2026-10-02T07:14:10.427220+00:00"
+    },
+    "callback": null,
+    "kb_searches": 2,
+    "grounded_answers": 1,
+    "refusals": 1,
+    "grounding_rate": 0.5
+  },
+  "kb_searches": [
+    {
+      "query": "late payment penalty on instalment",
+      "grounded": true,
+      "confidence": 9.552321434020996,
+      "threshold": 2.0,
+      "citations": [
+        "internal://id/coverage_rule",
+        "internal://id/coverage_rule",
+        "internal://id/objection_handling",
+        "internal://id/eligibility_rule"
+      ],
+      "latency_ms": 2489.8
+    },
+    {
+      "query": "tenor extension relief options financing",
+      "grounded": false,
+      "confidence": 1.4863271713256836,
+      "threshold": 2.0,
+      "citations": [],
+      "latency_ms": 2277.1
+    }
+  ],
+  "transcript": [
+    {
+      "role": "agent",
+      "text": "Selamat pagi, Bapak/Ibu. Saya Sari dari PT\u202fMitra\u202fFinansial pembiayaan. Mohon maaf mengganggu waktunya \u2014 apakah benar ini dengan Bapak/Ibu?",
+      "at": "2026-10-02T07:11:06.660516+00:00",
+      "tool_calls": [],
+      "timings_ms": {
+        "llm_0": 1281.0,
+        "turn_total": 1281.0
+      }
+    },
+    {
+      "role": "caller",
+      "text": "Iya betul, saya sendiri.",
+      "at": "2026-10-02T07:11:06.662685+00:00",
+      "tool_calls": [],
+      "timings_ms": {}
+    },
+    {
+      "role": "agent",
+      "text": "Baik, terima kasih. Boleh saya tahu nama Bapak/Ibu untuk pencatatan?",
+      "at": "2026-10-02T07:11:08.424950+00:00",
+      "tool_calls": [],
+      "timings_ms": {
+        "llm_0": 1762.2,
+        "turn_total": 1762.2
+      }
+    },
+    {
+      "role": "caller",
+      "text": "Udah terima kok remindernya kemarin.",
+      "at": "2026-10-02T07:11:08.437673+00:00",
+      "tool_calls": [],
+      "timings_ms": {}
+    },
+    {
+      "role": "agent",
+      "text": "Terima kasih, Pak/Bu. Untuk keperluan pencatatan, boleh saya catat nama lengkap Bapak/Ibu?",
+      "at": "2026-10-02T07:11:25.638912+00:00",
+      "tool_calls": [],
+      "timings_ms": {
+        "llm_0": 17201.0,
+        "turn_total": 17201.1
+      }
+    },
+    {
+      "role": "caller",
+      "text": "Nah itu dia, bulan ini agak berat. Gaji belum turun.",
+      "at": "2026-10-02T07:11:25.639629+00:00",
+      "tool_calls": [],
+      "timings_ms": {}
+    },
+    {
+      "role": "agent",
+      "text": "Baik, Pak, saya mengerti kondisinya. Kira\u2011kira kapan Bapak berencana membayar cicilan bulan ini, dan melalui channel apa\u2014misalnya transfer atau auto\u2011debit?",
+      "at": "2026-10-02T07:12:07.991536+00:00",
+      "tool_calls": [],
+      "timings_ms": {
+        "throttle_wait_0": 41270.9,
+        "llm_0": 1080.4,
+        "turn_total": 42351.5
+      }
+    },
+    {
+      "role": "caller",
+      "text": "Kalau telat gitu dendanya gimana ya?",
+      "at": "2026-10-02T07:12:07.994234+00:00",
+      "tool_calls": [],
+      "timings_ms": {}
+    },
+    {
+      "role": "agent",
+      "text": "Baik Pak, untuk keterlambatan ada denda harian yang dihitung dari nilai angsuran yang tertunggak, mulai hari pertama setelah jatuh tempo. Jika ada pertanyaan lebih lanjut, saya bisa sambungkan ke rekan saya yang dapat cek nominal pastinya.",
+      "at": "2026-10-02T07:12:26.557362+00:00",
+      "tool_calls": [
+        {
+          "tool": "search_knowledge_base",
+          "args": {
+            "query": "late payment penalty on instalment"
+          },
+          "grounded": true,
+          "confidence": null,
+          "latency_ms": 2490.3
+        }
+      ],
+      "timings_ms": {
+        "throttle_wait_0": 680.7,
+        "llm_0": 590.3,
+        "tool_search_knowledge_base_0": 2490.3,
+        "throttle_wait_1": 14132.4,
+        "llm_1": 667.6,
+        "turn_total": 18562.9
+      }
+    },
+    {
+      "role": "caller",
+      "text": "Oh gitu. Ada keringanan gak kalau misalnya saya minta perpanjangan tenor?",
+      "at": "2026-10-02T07:12:26.559568+00:00",
+      "tool_calls": [],
+      "timings_ms": {}
+    },
+    {
+      "role": "agent",
+      "text": "Mohon maaf Pak, untuk opsi perpanjangan tenor saya belum memiliki informasinya. Saya sambungkan ke rekan saya yang dapat membantu lebih detail, ya.",
+      "at": "2026-10-02T07:13:27.440171+00:00",
+      "tool_calls": [
+        {
+          "tool": "search_knowledge_base",
+          "args": {
+            "query": "tenor extension relief options financing"
+          },
+          "grounded": false,
+          "confidence": null,
+          "latency_ms": 2277.1
+        }
+      ],
+      "timings_ms": {
+        "throttle_wait_0": 41681.9,
+        "llm_0": 729.7,
+        "tool_search_knowledge_base_0": 2277.1,
+        "throttle_wait_1": 15558.2,
+        "llm_1": 632.2,
+        "turn_total": 60880.0
+      }
+    },
+    {
+      "role": "caller",
+      "text": "Oke siap, makasih ya.",
+      "at": "2026-10-02T07:13:27.441966+00:00",
+      "tool_calls": [],
+      "timings_ms": {}
+    },
+    {
+      "role": "agent",
+      "text": "Baik Pak, rekan kami akan segera menghubungi Bapak kembali.",
+      "at": "2026-10-02T07:14:28.311829+00:00",
+      "tool_calls": [
+        {
+          "tool": "request_human_handoff",
+          "args": {
+            "context": "Caller requested extension info, no data available",
+            "reason": "caller_requested"
+          },
+          "grounded": null,
+          "confidence": null,
+          "latency_ms": 2080.9
+        }
+      ],
+      "timings_ms": {
+        "throttle_wait_0": 41779.9,
+        "llm_0": 1204.4,
+        "tool_request_human_handoff_0": 2080.9,
+        "throttle_wait_1": 15181.7,
+        "llm_1": 621.2,
+        "turn_total": 60869.3
+      }
+    }
+  ]
+}

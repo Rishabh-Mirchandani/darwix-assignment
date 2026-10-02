@@ -1,0 +1,100 @@
+{
+  "call_id": "b47f833f2b26",
+  "label": "05_human_request",
+  "model": "qwen/qwen3.8-27b",
+  "language": "en",
+  "started_at": "2026-10-02T06:38:42.348068+00:00",
+  "summary": {
+    "call_id": "b47f833f2b26",
+    "started_at": "2026-10-02T06:38:42.348068+00:00",
+    "lead": {},
+    "handoff": {
+      "reason": "caller_requested",
+      "context": "Caller wants a human agent; was qualifying for father aged 71.",
+      "at": "2026-10-02T06:39:38.299379+00:00"
+    },
+    "callback": null,
+    "kb_searches": 0,
+    "grounded_answers": 0,
+    "refusals": 0,
+    "grounding_rate": null
+  },
+  "kb_searches": [],
+  "transcript": [
+    {
+      "role": "agent",
+      "text": "Hi, this is Meera calling from Niva Bupa. I'm reaching out about health cover for you and your family \u2014 is now a good time for a quick chat?",
+      "at": "2026-10-02T06:38:55.757329+00:00",
+      "tool_calls": [],
+      "timings_ms": {
+        "llm_0": 13406.3,
+        "turn_total": 13406.3
+      }
+    },
+    {
+      "role": "caller",
+      "text": "Okay.",
+      "at": "2026-10-02T06:38:55.763784+00:00",
+      "tool_calls": [],
+      "timings_ms": {}
+    },
+    {
+      "role": "agent",
+      "text": "Great. To start, who are you looking to get covered \u2014 just yourself, or your family too?",
+      "at": "2026-10-02T06:39:09.158546+00:00",
+      "tool_calls": [],
+      "timings_ms": {
+        "llm_0": 13394.4,
+        "turn_total": 13394.5
+      }
+    },
+    {
+      "role": "caller",
+      "text": "It's for my father, he's 71.",
+      "at": "2026-10-02T06:39:09.160578+00:00",
+      "tool_calls": [],
+      "timings_ms": {}
+    },
+    {
+      "role": "agent",
+      "text": "Thanks \u2014 so it's for your father, aged 71. What city is he based in?",
+      "at": "2026-10-02T06:39:23.841509+00:00",
+      "tool_calls": [],
+      "timings_ms": {
+        "llm_0": 14680.6,
+        "turn_total": 14680.6
+      }
+    },
+    {
+      "role": "caller",
+      "text": "Actually, I'd rather just speak to a real person about this.",
+      "at": "2026-10-02T06:39:23.842422+00:00",
+      "tool_calls": [],
+      "timings_ms": {}
+    },
+    {
+      "role": "agent",
+      "text": "Of course \u2014 I'll get a colleague to call you back. Is this the best number to reach you on?",
+      "at": "2026-10-02T06:39:56.336647+00:00",
+      "tool_calls": [
+        {
+          "tool": "request_human_handoff",
+          "args": {
+            "context": "Caller wants a human agent; was qualifying for father aged 71.",
+            "reason": "caller_requested"
+          },
+          "grounded": null,
+          "confidence": null,
+          "latency_ms": 449.9
+        }
+      ],
+      "timings_ms": {
+        "llm_0": 14456.6,
+        "tool_request_human_handoff_0": 449.9,
+        "throttle_wait_1": 17257.9,
+        "llm_1": 328.5,
+        "turn_total": 32493.6
+      }
+    }
+  ]
+}

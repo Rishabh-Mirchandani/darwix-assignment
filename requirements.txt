@@ -1,0 +1,44 @@
+# ---- Core ----
+python-dotenv==1.0.1
+pydantic==2.10.4
+pydantic-settings==2.7.0
+tenacity==9.0.0
+rich==13.9.4
+
+# ---- Web / API / streaming ----
+fastapi==0.115.6
+uvicorn[standard]==0.34.0
+websockets==14.1
+python-multipart==0.0.20
+jinja2==3.1.5
+
+# ---- Q2: ingestion & parsing ----
+requests==2.32.3
+httpx==0.28.1
+trafilatura==2.0.0
+beautifulsoup4==4.12.3
+lxml==5.3.0
+pymupdf==1.25.1
+
+# ---- Q2: knowledge base ----
+# fastembed = ONNX embeddings, no torch. ~2GB lighter, faster on CPU.
+fastembed==0.5.1
+rank-bm25==0.2.2
+datasketch==1.6.5
+# NOTE: no vector database, deliberately. The corpus is ~1.5k chunks; exact
+# cosine over a (1500 x 384) float32 matrix is sub-millisecond, so an ANN index
+# (Chroma/FAISS/Qdrant) would add a large dependency tree plus approximation
+# error to solve a problem this corpus does not have. See docs/DESIGN.md.
+
+# ---- LLM providers (free tiers, no card) ----
+groq==0.15.0
+google-genai==0.8.0
+
+# ---- Voice: TTS / VAD / audio ----
+# 7.2.8+ required: earlier versions fail Microsoft's Sec-MS-GEC token
+# check with a 403 WebSocket handshake error.
+edge-tts==7.2.8
+webrtcvad-wheels==2.0.14
+numpy==2.2.1
+soundfile==0.13.0
+pydub==0.25.1

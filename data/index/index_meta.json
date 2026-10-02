@@ -1,0 +1,6 @@
+{
+  "embedding_model": "BAAI/bge-small-en-v1.5",
+  "embedding_dim": 384,
+  "record_count": 2466,
+  "search": "exact cosine (no ANN) - see module docstring"
+}

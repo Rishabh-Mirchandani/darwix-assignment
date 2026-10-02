@@ -1,0 +1,223 @@
+{
+  "call_id": "40a719e324b6",
+  "label": "02_objection",
+  "model": "qwen/qwen3.8-27b",
+  "language": "en",
+  "started_at": "2026-10-02T06:32:37.728306+00:00",
+  "summary": {
+    "call_id": "40a719e324b6",
+    "started_at": "2026-10-02T06:32:37.728306+00:00",
+    "lead": {},
+    "handoff": null,
+    "callback": null,
+    "kb_searches": 4,
+    "grounded_answers": 4,
+    "refusals": 0,
+    "grounding_rate": 1.0
+  },
+  "kb_searches": [
+    {
+      "query": "affordable health insurance plans low premium value",
+      "grounded": true,
+      "confidence": 5.219304084777832,
+      "threshold": 2.0,
+      "citations": [
+        "https://www.nivabupa.com/health-insurance/3-lakh-health-insurance-plans.html",
+        "https://www.nivabupa.com/health-insurance/50-lakh-health-insurance-plans.html",
+        "https://www.nivabupa.com/corporate-insurance-articles/does-group-health-insurance-cover-pre-existing-diseases.html",
+        "https://www.nivabupa.com/health-insurance/health-insurance-plans-for-parents.html"
+      ],
+      "latency_ms": 1011.4
+    },
+    {
+      "query": "young healthy individual health insurance benefits early purchase",
+      "grounded": true,
+      "confidence": 5.653712749481201,
+      "threshold": 1.2,
+      "citations": [
+        "https://www.nivabupa.com/family-health-insurance-plans/aspire-max.html",
+        "https://www.nivabupa.com/health-insurance/3-lakh-health-insurance-plans.html",
+        "https://www.nivabupa.com/health-insurance/health-insurance-plans.html",
+        "https://www.nivabupa.com/health-insurance/individual-health-insurance-plans.html"
+      ],
+      "latency_ms": 457.7
+    },
+    {
+      "query": "why individual health insurance needed alongside employer group cover",
+      "grounded": true,
+      "confidence": 5.526574611663818,
+      "threshold": 2.0,
+      "citations": [
+        "https://www.nivabupa.com/health-insurance/individual-health-insurance-plans.html",
+        "https://www.nivabupa.com/health-insurance/individual-health-insurance-plans.html",
+        "https://www.nivabupa.com/corporate-insurance-articles/does-group-health-insurance-cover-pre-existing-diseases.html",
+        "https://www.nivabupa.com/health-insurance/individual-health-insurance-plans.html"
+      ],
+      "latency_ms": 1411.2
+    },
+    {
+      "query": "health insurance premium cost for 34 year old individual",
+      "grounded": true,
+      "confidence": 2.7495381832122803,
+      "threshold": 2.0,
+      "citations": [
+        "https://www.nivabupa.com/health-insurance/health-insurance-cost-in-india.html",
+        "https://www.nivabupa.com/health-insurance/1-crore-health-insurance-plans.html",
+        "https://www.nivabupa.com/health-insurance/5-lakh-health-insurance-plan.html",
+        "https://www.nivabupa.com/health-insurance-articles/age-limit-for-family-health-insurance-living-in-india.html"
+      ],
+      "latency_ms": 1418.0
+    }
+  ],
+  "transcript": [
+    {
+      "role": "agent",
+      "text": "Hi, this is Meera from Niva Bupa. I'm calling about health insurance options for you \u2014 is now a good time for a quick chat?",
+      "at": "2026-10-02T06:32:38.130498+00:00",
+      "tool_calls": [],
+      "timings_ms": {
+        "llm_0": 397.0,
+        "turn_total": 397.0
+      }
+    },
+    {
+      "role": "caller",
+      "text": "Yeah go on.",
+      "at": "2026-10-02T06:32:38.132930+00:00",
+      "tool_calls": [],
+      "timings_ms": {}
+    },
+    {
+      "role": "agent",
+      "text": "Great. To point you in the right direction, who do you need cover for \u2014 just yourself, or your family too?",
+      "at": "2026-10-02T06:32:46.513944+00:00",
+      "tool_calls": [],
+      "timings_ms": {
+        "llm_0": 8380.7,
+        "turn_total": 8380.8
+      }
+    },
+    {
+      "role": "caller",
+      "text": "Look, honestly, health insurance is far too expensive for what it is.",
+      "at": "2026-10-02T06:32:46.516826+00:00",
+      "tool_calls": [],
+      "timings_ms": {}
+    },
+    {
+      "role": "agent",
+      "text": "That's fair. One way people keep costs down is a smaller base cover, say three lakh, with a top-up on top \u2014 it's more affordable than a big single plan.\n\nWho would you need cover for, just yourself or your family?",
+      "at": "2026-10-02T06:33:16.442575+00:00",
+      "tool_calls": [
+        {
+          "tool": "search_knowledge_base",
+          "args": {
+            "query": "affordable health insurance plans low premium value"
+          },
+          "grounded": true,
+          "confidence": null,
+          "latency_ms": 1011.5
+        }
+      ],
+      "timings_ms": {
+        "llm_0": 14475.7,
+        "tool_search_knowledge_base_0": 1011.5,
+        "llm_1": 14437.6,
+        "turn_total": 29924.9
+      }
+    },
+    {
+      "role": "caller",
+      "text": "I'm 34 and perfectly healthy, I've never been to a hospital in my life.",
+      "at": "2026-10-02T06:33:16.448616+00:00",
+      "tool_calls": [],
+      "timings_ms": {}
+    },
+    {
+      "role": "agent",
+      "text": "Being young and healthy actually works in your favour \u2014 lower premiums and some plans even reward staying claim-free with bonuses.\n\nSo just yourself, or would you want to cover your family too?",
+      "at": "2026-10-02T06:33:51.180387+00:00",
+      "tool_calls": [
+        {
+          "tool": "search_knowledge_base",
+          "args": {
+            "query": "young healthy individual health insurance benefits early purchase"
+          },
+          "grounded": true,
+          "confidence": null,
+          "latency_ms": 457.8
+        }
+      ],
+      "timings_ms": {
+        "throttle_wait_0": 21931.8,
+        "llm_0": 427.2,
+        "tool_search_knowledge_base_0": 457.8,
+        "throttle_wait_1": 7497.1,
+        "llm_1": 4415.7,
+        "turn_total": 34730.8
+      }
+    },
+    {
+      "role": "caller",
+      "text": "I also already get cover through my employer, so what's the point?",
+      "at": "2026-10-02T06:33:51.182272+00:00",
+      "tool_calls": [],
+      "timings_ms": {}
+    },
+    {
+      "role": "agent",
+      "text": "The catch is employer cover usually has a smaller sum insured and ends the day you leave the job. Your own policy stays with you no matter where you work.\n\nDoes your employer cover just you, or your family too?",
+      "at": "2026-10-02T06:34:27.137951+00:00",
+      "tool_calls": [
+        {
+          "tool": "search_knowledge_base",
+          "args": {
+            "query": "why individual health insurance needed alongside employer group cover"
+          },
+          "grounded": true,
+          "confidence": null,
+          "latency_ms": 1411.6
+        }
+      ],
+      "timings_ms": {
+        "throttle_wait_0": 10060.7,
+        "llm_0": 7545.6,
+        "tool_search_knowledge_base_0": 1411.6,
+        "throttle_wait_1": 6491.1,
+        "llm_1": 10444.4,
+        "turn_total": 35954.7
+      }
+    },
+    {
+      "role": "caller",
+      "text": "Hmm. Alright, what would it actually cost me?",
+      "at": "2026-10-02T06:34:27.140060+00:00",
+      "tool_calls": [],
+      "timings_ms": {}
+    },
+    {
+      "role": "agent",
+      "text": "Honestly, I can't quote you a final number \u2014 it depends on your city, cover amount and a few other things. As a rough guide, a fifty-lakh policy for someone your age can land somewhere between twenty and sixty thousand a year.\n\nI can get you a proper quote with a colleague \u2014 would that be useful?",
+      "at": "2026-10-02T06:35:02.966853+00:00",
+      "tool_calls": [
+        {
+          "tool": "search_knowledge_base",
+          "args": {
+            "query": "health insurance premium cost for 34 year old individual"
+          },
+          "grounded": true,
+          "confidence": null,
+          "latency_ms": 1418.0
+        }
+      ],
+      "timings_ms": {
+        "throttle_wait_0": 11919.0,
+        "llm_0": 5493.3,
+        "tool_search_knowledge_base_0": 1418.0,
+        "throttle_wait_1": 5458.8,
+        "llm_1": 11535.4,
+        "turn_total": 35825.8
+      }
+    }
+  ]
+}

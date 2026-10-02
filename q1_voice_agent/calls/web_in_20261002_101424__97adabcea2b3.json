@@ -1,0 +1,208 @@
+{
+  "call_id": "97adabcea2b3",
+  "label": "web_in_20261002_101424",
+  "model": "openai/gpt-oss-120b",
+  "language": "en",
+  "started_at": "2026-10-02T10:12:02.829109+00:00",
+  "summary": {
+    "call_id": "97adabcea2b3",
+    "started_at": "2026-10-02T10:12:02.829109+00:00",
+    "lead": {
+      "caller_name": "Sam",
+      "cover_for": "family",
+      "eldest_age": 35,
+      "members_count": 2
+    },
+    "handoff": null,
+    "callback": null,
+    "kb_searches": 1,
+    "grounded_answers": 1,
+    "refusals": 0,
+    "grounding_rate": 1.0
+  },
+  "kb_searches": [
+    {
+      "query": "pre-existing condition waiting period health insurance India",
+      "grounded": true,
+      "confidence": 7.662917613983154,
+      "threshold": 1.2,
+      "citations": [
+        "https://www.nivabupa.com/health-insurance/25-lakh-health-insurance-plans.html",
+        "https://www.nivabupa.com/health-insurance/tamil-nadu.html",
+        "https://www.nivabupa.com/health-insurance/west-bengal.html",
+        "https://www.nivabupa.com/health-insurance/health-insurance-plans.html"
+      ],
+      "latency_ms": 6038.2
+    }
+  ],
+  "transcript": [
+    {
+      "role": "agent",
+      "text": "Hi, I\u2019m Meera calling from Niva\u202fBupa. I\u2019d like to see if we can help you with health\u2011insurance options\u2014 is now a good time to talk?",
+      "at": "2026-10-02T10:12:03.717178+00:00",
+      "tool_calls": [],
+      "timings_ms": {
+        "llm_0": 788.3,
+        "turn_total": 790.4
+      }
+    },
+    {
+      "role": "caller",
+      "text": "Yes, go ahead.",
+      "at": "2026-10-02T10:12:19.179489+00:00",
+      "tool_calls": [],
+      "timings_ms": {}
+    },
+    {
+      "role": "agent",
+      "text": "Great, may I have your name, please?",
+      "at": "2026-10-02T10:12:19.899507+00:00",
+      "tool_calls": [],
+      "timings_ms": {
+        "llm_0": 713.8,
+        "turn_total": 713.9
+      }
+    },
+    {
+      "role": "caller",
+      "text": "Sam.",
+      "at": "2026-10-02T10:12:27.901280+00:00",
+      "tool_calls": [],
+      "timings_ms": {}
+    },
+    {
+      "role": "agent",
+      "text": "Thanks, Sam. What prompted you to look at health\u2011insurance coverage today?",
+      "at": "2026-10-02T10:12:28.922960+00:00",
+      "tool_calls": [],
+      "timings_ms": {
+        "llm_0": 1021.5,
+        "turn_total": 1021.6
+      }
+    },
+    {
+      "role": "caller",
+      "text": "I want to buy a plan for me and my brother.",
+      "at": "2026-10-02T10:12:42.013640+00:00",
+      "tool_calls": [],
+      "timings_ms": {}
+    },
+    {
+      "role": "agent",
+      "text": "Got it. How many people in total need cover, and could you tell me the age of the older sibling?",
+      "at": "2026-10-02T10:12:43.348749+00:00",
+      "tool_calls": [],
+      "timings_ms": {
+        "llm_0": 1335.0,
+        "turn_total": 1335.1
+      }
+    },
+    {
+      "role": "caller",
+      "text": "two people and he is 35.",
+      "at": "2026-10-02T10:12:57.167887+00:00",
+      "tool_calls": [],
+      "timings_ms": {}
+    },
+    {
+      "role": "agent",
+      "text": "Most plans have a waiting period of two to three years for any pre\u2011existing condition. Shall I check how that would apply for a 35\u2011year\u2011old?",
+      "at": "2026-10-02T10:13:21.231579+00:00",
+      "tool_calls": [
+        {
+          "tool": "search_knowledge_base",
+          "args": {
+            "category": "coverage_rule",
+            "query": "pre-existing condition waiting period health insurance India"
+          },
+          "grounded": true,
+          "confidence": null,
+          "latency_ms": 6038.9
+        }
+      ],
+      "timings_ms": {
+        "throttle_wait_0": 6797.6,
+        "llm_0": 899.6,
+        "tool_search_knowledge_base_0": 6038.9,
+        "throttle_wait_1": 9238.8,
+        "llm_1": 1087.5,
+        "turn_total": 24063.6
+      }
+    },
+    {
+      "role": "caller",
+      "text": "Thank you.",
+      "at": "2026-10-02T10:13:23.516549+00:00",
+      "tool_calls": [],
+      "timings_ms": {}
+    },
+    {
+      "role": "agent",
+      "text": "I\u2019ll send your details to a specialist who\u2019ll follow up with you shortly.",
+      "at": "2026-10-02T10:13:44.038154+00:00",
+      "tool_calls": [
+        {
+          "tool": "save_lead",
+          "args": {
+            "budget_hint": null,
+            "caller_name": "Sam",
+            "city": null,
+            "cover_for": "family",
+            "eldest_age": 35,
+            "existing_conditions": null,
+            "existing_cover": null,
+            "members_count": 2,
+            "notes": null
+          },
+          "grounded": null,
+          "confidence": null,
+          "latency_ms": 336.4
+        }
+      ],
+      "timings_ms": {
+        "throttle_wait_0": 5656.3,
+        "llm_0": 1389.4,
+        "tool_save_lead_0": 336.4,
+        "throttle_wait_1": 12699.3,
+        "llm_1": 438.7,
+        "turn_total": 20521.6
+      }
+    },
+    {
+      "role": "caller",
+      "text": "Yes.",
+      "at": "2026-10-02T10:13:45.913764+00:00",
+      "tool_calls": [],
+      "timings_ms": {}
+    },
+    {
+      "role": "agent",
+      "text": "Great, you\u2019ll hear from our specialist soon\u2014thanks for your time!",
+      "at": "2026-10-02T10:14:05.982117+00:00",
+      "tool_calls": [],
+      "timings_ms": {
+        "throttle_wait_0": 19201.8,
+        "llm_0": 865.4,
+        "turn_total": 20068.3
+      }
+    },
+    {
+      "role": "caller",
+      "text": "Okay, thank you.",
+      "at": "2026-10-02T10:14:09.256309+00:00",
+      "tool_calls": [],
+      "timings_ms": {}
+    },
+    {
+      "role": "agent",
+      "text": "You\u2019re welcome! Have a wonderful day.",
+      "at": "2026-10-02T10:14:22.159115+00:00",
+      "tool_calls": [],
+      "timings_ms": {
+        "throttle_wait_0": 12225.1,
+        "llm_0": 677.2,
+        "turn_total": 12902.8
+      }
+    }
+  ]
+}

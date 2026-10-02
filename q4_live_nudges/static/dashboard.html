@@ -1,0 +1,179 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Live Call Nudges</title>
+<style>
+  :root{--bg:#0f1115;--panel:#171a21;--line:#262b35;--text:#e6e8ec;--dim:#8b93a3;
+        --accent:#4f9cf9;--crit:#f85149;--high:#d29922;--med:#4f9cf9;--low:#8b93a3;
+        --good:#3fb950;}
+  *{box-sizing:border-box;}
+  body{margin:0;background:var(--bg);color:var(--text);height:100vh;display:flex;
+       flex-direction:column;font:15px/1.5 ui-sans-serif,system-ui,"Segoe UI",sans-serif;}
+  header{padding:12px 20px;border-bottom:1px solid var(--line);display:flex;
+         align-items:center;gap:14px;flex-wrap:wrap;}
+  h1{font-size:15px;margin:0;font-weight:600;}
+  select,button{font:inherit;background:#1e2430;color:var(--text);
+                border:1px solid var(--line);border-radius:7px;padding:7px 13px;}
+  button{font-weight:600;cursor:pointer;}
+  button.primary{background:var(--accent);border-color:var(--accent);color:#06101f;}
+  button:disabled{opacity:.45;cursor:not-allowed;}
+  .pill{font-size:12px;padding:3px 9px;border-radius:999px;border:1px solid var(--line);color:var(--dim);}
+  .pill.live{color:var(--good);border-color:var(--good);}
+  main{flex:1;display:flex;min-height:0;}
+  #left{flex:1;display:flex;flex-direction:column;min-width:0;}
+  #transcript{flex:1;overflow-y:auto;padding:18px 20px;}
+  #nudges{width:390px;border-left:1px solid var(--line);background:var(--panel);
+          display:flex;flex-direction:column;}
+  #nudgeList{flex:1;overflow-y:auto;padding:14px;}
+  #stats{border-top:1px solid var(--line);padding:12px 16px;}
+  .utt{margin-bottom:12px;max-width:74ch;}
+  .utt .who{font-size:11px;letter-spacing:.07em;text-transform:uppercase;color:var(--dim);}
+  .utt.agent .who{color:var(--accent);}
+  .utt .t{background:#141821;border:1px solid var(--line);border-radius:9px;padding:8px 12px;margin-top:3px;}
+  .utt .m{font-size:11px;color:var(--dim);margin-top:3px;font-family:ui-monospace,Consolas,monospace;}
+  .nudge{border-left:3px solid var(--med);background:#141821;border-radius:0 9px 9px 0;
+         padding:10px 13px;margin-bottom:11px;animation:pop .25s ease-out;}
+  @keyframes pop{from{opacity:0;transform:translateX(14px);}to{opacity:1;transform:none;}}
+  .nudge.CRITICAL{border-left-color:var(--crit);}
+  .nudge.HIGH{border-left-color:var(--high);}
+  .nudge.MEDIUM{border-left-color:var(--med);}
+  .nudge.LOW{border-left-color:var(--low);}
+  .nudge .top{display:flex;justify-content:space-between;font-size:10px;
+              letter-spacing:.07em;text-transform:uppercase;color:var(--dim);margin-bottom:5px;}
+  .nudge.CRITICAL .top span:first-child{color:var(--crit);}
+  .nudge.HIGH .top span:first-child{color:var(--high);}
+  .nudge .text{font-weight:600;}
+  .nudge .ev{font-size:11px;color:var(--dim);margin-top:5px;
+             font-family:ui-monospace,Consolas,monospace;}
+  .sup{font-size:11px;color:var(--dim);font-family:ui-monospace,Consolas,monospace;
+       padding:4px 0;border-bottom:1px dashed var(--line);}
+  h2{font-size:11px;letter-spacing:.08em;text-transform:uppercase;color:var(--dim);
+     margin:0;padding:12px 14px 6px;font-weight:600;}
+  .stat{display:flex;justify-content:space-between;font-size:12px;padding:2px 0;
+        font-family:ui-monospace,Consolas,monospace;}
+  .stat span:first-child{color:var(--dim);}
+  .empty{color:var(--dim);font-size:13px;}
+</style>
+</head>
+<body>
+
+<header>
+  <h1>Live Call Nudges</h1>
+  <select id="call"></select>
+  <label style="font-size:12px;color:var(--dim)">
+    <input type="checkbox" id="tier2" checked> LLM tier
+  </label>
+  <button class="primary" id="start">Start live replay</button>
+  <span class="pill" id="status">idle</span>
+  <span class="pill" id="clock">0.0s</span>
+</header>
+
+<main>
+  <div id="left">
+    <h2>Transcript (streaming)</h2>
+    <div id="transcript"><p class="empty">Press <strong>Start live replay</strong>.
+      Audio is fed at wall-clock speed — nudges appear while the call is still running.</p></div>
+  </div>
+  <aside id="nudges">
+    <h2>Nudges</h2>
+    <div id="nudgeList"><p class="empty">None yet.</p></div>
+    <div id="stats">
+      <h2 style="padding:0 0 6px">Latency / control</h2>
+      <div class="stat"><span>ASR p50</span><span id="sAsr">—</span></div>
+      <div class="stat"><span>End-to-end p50</span><span id="sE2e">—</span></div>
+      <div class="stat"><span>End-to-end p95</span><span id="sE2e95">—</span></div>
+      <div class="stat"><span>Emitted</span><span id="sEmit">0</span></div>
+      <div class="stat"><span>Suppressed</span><span id="sSup">0</span></div>
+    </div>
+  </aside>
+</main>
+
+<script>
+const $=id=>document.getElementById(id);
+let ws, t0, timer, emitted=0, suppressed=0;
+
+fetch('/calls').then(r=>r.json()).then(d=>{
+  d.calls.forEach(c=>{
+    const o=document.createElement('option');
+    o.value=c.id;
+    o.textContent=`${c.id} (${c.segments} segments${c.has_ground_truth?', labelled':''})`;
+    if(c.id===d.default) o.selected=true;
+    $('call').appendChild(o);
+  });
+}).catch(()=>{});
+
+function setStatus(t,cls){const e=$('status');e.textContent=t;e.className='pill'+(cls?' '+cls:'');}
+
+function addUtt(p){
+  const box=$('transcript');
+  if(box.querySelector('.empty')) box.innerHTML='';
+  const d=document.createElement('div');
+  d.className='utt '+(p.speaker==='agent'?'agent':'');
+  d.innerHTML=`<div class="who">${p.speaker}</div><div class="t"></div>
+               <div class="m">t=${p.start_s}s · asr ${p.asr_ms}ms</div>`;
+  d.querySelector('.t').textContent=p.text;
+  box.appendChild(d); box.scrollTop=box.scrollHeight;
+}
+
+function addNudge(p){
+  const list=$('nudgeList');
+  if(list.querySelector('.empty')) list.innerHTML='';
+  const d=document.createElement('div');
+  d.className='nudge '+p.priority;
+  const t=p.timings||{};
+  d.innerHTML=`<div class="top"><span>${p.priority}</span>
+                 <span>${t.end_to_end_ms||'?'}ms · tier ${p.tier}</span></div>
+               <div class="text"></div>
+               <div class="ev">${p.signal_type} · conf ${p.confidence}</div>`;
+  d.querySelector('.text').textContent=p.text;
+  list.prepend(d);
+  emitted++; $('sEmit').textContent=emitted;
+}
+
+function addSuppressed(p){
+  const list=$('nudgeList');
+  if(list.querySelector('.empty')) list.innerHTML='';
+  const d=document.createElement('div');
+  d.className='sup';
+  d.textContent=`suppressed ${p.signal} — ${p.reason}`;
+  list.prepend(d);
+  suppressed++; $('sSup').textContent=suppressed;
+}
+
+$('start').onclick=()=>{
+  $('transcript').innerHTML=''; $('nudgeList').innerHTML='';
+  emitted=0; suppressed=0; $('sEmit').textContent=0; $('sSup').textContent=0;
+  $('start').disabled=true;
+
+  const call=$('call').value;
+  const tier2=$('tier2').checked?'1':'0';
+  const proto=location.protocol==='https:'?'wss':'ws';
+  ws=new WebSocket(`${proto}://${location.host}/ws/live?call=${encodeURIComponent(call)}&speed=1.0&tier2=${tier2}`);
+
+  ws.onopen=()=>{
+    setStatus('live','live'); t0=performance.now();
+    timer=setInterval(()=>{$('clock').textContent=((performance.now()-t0)/1000).toFixed(1)+'s';},100);
+  };
+  ws.onclose=()=>{clearInterval(timer);$('start').disabled=false;};
+  ws.onerror=()=>setStatus('error');
+  ws.onmessage=ev=>{
+    const m=JSON.parse(ev.data);
+    if(m.type==='transcript') addUtt(m);
+    else if(m.type==='nudge') addNudge(m);
+    else if(m.type==='suppressed') addSuppressed(m);
+    else if(m.type==='finished'){
+      setStatus('finished');
+      const l=m.report.latency_ms;
+      $('sAsr').textContent=l.asr.p50+' ms';
+      $('sE2e').textContent=l.end_to_end.p50+' ms';
+      $('sE2e95').textContent=l.end_to_end.p95+' ms';
+      clearInterval(timer); $('start').disabled=false;
+    }
+    else if(m.type==='error'){setStatus('error');alert(m.message);}
+  };
+};
+</script>
+</body>
+</html>

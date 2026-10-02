@@ -1,0 +1,268 @@
+{
+  "report": {
+    "utterances": 17,
+    "latency_ms": {
+      "end_to_end": {
+        "p50": 309.0,
+        "p95": 1104.8,
+        "max": 1160.3
+      },
+      "asr": {
+        "p50": 271.4,
+        "p95": 386.0
+      },
+      "signal_tier1": {
+        "p50": 0.1,
+        "p95": 0.4
+      },
+      "signal_tier2_llm": {
+        "p50": 567.9,
+        "p95": 767.2,
+        "calls": 7
+      }
+    },
+    "nudges": {
+      "signals_seen": 8,
+      "nudges_emitted": 7,
+      "suppressed_total": 1,
+      "suppressed_below_confidence": 0,
+      "suppressed_duplicate": 0,
+      "suppressed_cooldown": 0,
+      "suppressed_rate_limit": 1,
+      "suppression_rate": 0.125
+    },
+    "suppressed_detail": [
+      {
+        "signal": "buying_signal",
+        "confidence": 0.88,
+        "reason": "rate limit reached (4/min)",
+        "evidence": "How do I sign up",
+        "at_s": 136.39
+      }
+    ],
+    "replay": {
+      "audio_seconds": 143.6,
+      "wall_seconds": 145.5,
+      "speed": 1.0,
+      "realtime_factor": 1.01
+    },
+    "accuracy": {
+      "expected_signals": 8,
+      "detected": 7,
+      "missed": [
+        "buying_signal"
+      ],
+      "false_positives": [],
+      "recall": 0.875,
+      "precision": 1.0,
+      "silent_turns_in_script": 9,
+      "total_nudges_emitted": 7
+    }
+  },
+  "transcript": [
+    {
+      "speaker": "agent",
+      "text": "Good afternoon. Am I speaking with Mr. Sharma?",
+      "start_s": 0.0,
+      "asr_ms": 640.8
+    },
+    {
+      "speaker": "customer",
+      "text": "Yes, speaking.",
+      "start_s": 6.41,
+      "asr_ms": 270.1
+    },
+    {
+      "speaker": "agent",
+      "text": "I'm calling about the health insurance inquiry you submitted last week. Is this a good time?",
+      "start_s": 9.98,
+      "asr_ms": 232.7
+    },
+    {
+      "speaker": "customer",
+      "text": "Sure, go ahead.",
+      "start_s": 21.32,
+      "asr_ms": 302.8
+    },
+    {
+      "speaker": "customer",
+      "text": "I should mention I have diabetes type 2 diagnosed 3 years ago.",
+      "start_s": 25.04,
+      "asr_ms": 278.1
+    },
+    {
+      "speaker": "agent",
+      "text": "That's absolutely fine, diabetes is very common and we cover it.",
+      "start_s": 34.9,
+      "asr_ms": 250.2
+    },
+    {
+      "speaker": "customer",
+      "text": "Okay, good. My wife also needs cover. She is not insured at all right now.",
+      "start_s": 43.66,
+      "asr_ms": 304.7
+    },
+    {
+      "speaker": "agent",
+      "text": "Right? Noted. So for your own policy, the premium works out to about 18,000 rupees a year.",
+      "start_s": 54.96,
+      "asr_ms": 260.6
+    },
+    {
+      "speaker": "customer",
+      "text": "Hmm, right. I see. Okay.",
+      "start_s": 68.11,
+      "asr_ms": 261.1
+    },
+    {
+      "speaker": "customer",
+      "text": "Sorry, the line is a bit bad. Could you say that again?",
+      "start_s": 75.02,
+      "asr_ms": 329.3
+    },
+    {
+      "speaker": "customer",
+      "text": "No, I don't have a second car. It's just the one.",
+      "start_s": 83.24,
+      "asr_ms": 258.7
+    },
+    {
+      "speaker": "customer",
+      "text": "And I'm not frustrated. I just want to understand the numbers.",
+      "start_s": 91.09,
+      "asr_ms": 386.0
+    },
+    {
+      "speaker": "customer",
+      "text": "Although honestly, this is the third time I've called about this and nobody has given me a straight answer.",
+      "start_s": 99.8,
+      "asr_ms": 271.4
+    },
+    {
+      "speaker": "agent",
+      "text": "I understand. Let me just reassure you, your claim will definitely be approved, there's nothing to worry about.",
+      "start_s": 112.34,
+      "asr_ms": 311.6
+    },
+    {
+      "speaker": "customer",
+      "text": "The thing is, I lost my job in March so money is quite tight at the moment.",
+      "start_s": 126.02,
+      "asr_ms": 259.6
+    },
+    {
+      "speaker": "customer",
+      "text": "But alright, that sounds reasonable. How do I sign up?",
+      "start_s": 136.39,
+      "asr_ms": 308.7
+    },
+    {
+      "speaker": "agent",
+      "text": "I'll email you the proposal form today.",
+      "start_s": 145.18,
+      "asr_ms": 286.5
+    }
+  ],
+  "nudges": [
+    {
+      "id": "n0001",
+      "text": "Identify yourself and the company.",
+      "signal_type": "compliance_gap",
+      "priority": "CRITICAL",
+      "priority_value": 1,
+      "confidence": 0.92,
+      "evidence": "missing disclosure: identity",
+      "created_at": 1790931691.1913602,
+      "expires_at": 1790931751.1913602,
+      "latency_ms": 0.1,
+      "tier": 1
+    },
+    {
+      "id": "n0002",
+      "text": "Disclose the waiting period before moving on.",
+      "signal_type": "compliance_gap",
+      "priority": "CRITICAL",
+      "priority_value": 1,
+      "confidence": 0.92,
+      "evidence": "missing disclosure: waiting_period",
+      "created_at": 1790931716.1235137,
+      "expires_at": 1790931776.1235137,
+      "latency_ms": 0.0,
+      "tier": 1
+    },
+    {
+      "id": "n0003",
+      "text": "Cross-sell opening - offer cover for the person mentioned.",
+      "signal_type": "missed_cross_sell",
+      "priority": "MEDIUM",
+      "priority_value": 3,
+      "confidence": 0.88,
+      "evidence": "My wife also",
+      "created_at": 1790931724.9189246,
+      "expires_at": 1790931759.9189246,
+      "latency_ms": 0.3,
+      "tier": 1
+    },
+    {
+      "id": "n0004",
+      "text": "Acknowledge the frustration before continuing.",
+      "signal_type": "rising_frustration",
+      "priority": "HIGH",
+      "priority_value": 2,
+      "confidence": 0.88,
+      "evidence": "third time I've called",
+      "created_at": 1790931781.0330102,
+      "expires_at": 1790931826.0330102,
+      "latency_ms": 0.2,
+      "tier": 1
+    },
+    {
+      "id": "n0005",
+      "text": "Do not guarantee outcomes - soften that claim.",
+      "signal_type": "risky_statement",
+      "priority": "CRITICAL",
+      "priority_value": 1,
+      "confidence": 0.88,
+      "evidence": "definitely be approved",
+      "created_at": 1790931793.608981,
+      "expires_at": 1790931853.608981,
+      "latency_ms": 0.1,
+      "tier": 1
+    },
+    {
+      "id": "n0006",
+      "text": "Say the premium is indicative and subject to underwriting.",
+      "signal_type": "compliance_gap",
+      "priority": "CRITICAL",
+      "priority_value": 1,
+      "confidence": 0.92,
+      "evidence": "missing disclosure: premium_not_final",
+      "created_at": 1790931793.6091204,
+      "expires_at": 1790931853.6091204,
+      "latency_ms": 0.2,
+      "tier": 1
+    },
+    {
+      "id": "n0007",
+      "text": "Offer an approved payment-support option or a callback.",
+      "signal_type": "payment_difficulty",
+      "priority": "HIGH",
+      "priority_value": 2,
+      "confidence": 0.88,
+      "evidence": "lost my job",
+      "created_at": 1790931807.2368069,
+      "expires_at": 1790931852.2368069,
+      "latency_ms": 0.1,
+      "tier": 1
+    }
+  ],
+  "suppressed": [
+    {
+      "signal": "buying_signal",
+      "confidence": 0.88,
+      "reason": "rate limit reached (4/min)",
+      "evidence": "How do I sign up",
+      "at_s": 136.39
+    }
+  ]
+}

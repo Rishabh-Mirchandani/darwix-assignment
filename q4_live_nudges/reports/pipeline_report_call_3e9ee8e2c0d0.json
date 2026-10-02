@@ -1,0 +1,124 @@
+{
+  "report": {
+    "utterances": 13,
+    "latency_ms": {
+      "end_to_end": {
+        "p50": 299.7,
+        "p95": 369.4,
+        "max": 770.7
+      },
+      "asr": {
+        "p50": 299.5,
+        "p95": 369.2
+      },
+      "signal_tier1": {
+        "p50": 0.1,
+        "p95": 0.3
+      },
+      "signal_tier2_llm": {
+        "p50": 0.0,
+        "p95": 0.0,
+        "calls": 0
+      }
+    },
+    "nudges": {
+      "signals_seen": 0,
+      "nudges_emitted": 0,
+      "suppressed_total": 0,
+      "suppressed_below_confidence": 0,
+      "suppressed_duplicate": 0,
+      "suppressed_cooldown": 0,
+      "suppressed_rate_limit": 0,
+      "suppression_rate": 0.0
+    },
+    "suppressed_detail": [],
+    "replay": {
+      "audio_seconds": 125.9,
+      "wall_seconds": 125.2,
+      "speed": 1.0,
+      "realtime_factor": 0.99
+    }
+  },
+  "transcript": [
+    {
+      "speaker": "agent",
+      "text": "Hi, this is Meera calling from Niva Bupa. I'm reaching out to see if I can share some health insurance options. Is now a good time to talk?",
+      "start_s": 0.0,
+      "asr_ms": 770.4
+    },
+    {
+      "speaker": "customer",
+      "text": "Yes, go ahead.",
+      "start_s": 16.53,
+      "asr_ms": 241.8
+    },
+    {
+      "speaker": "agent",
+      "text": "Great! Who are you looking to cover today and how many people would that be?",
+      "start_s": 23.76,
+      "asr_ms": 353.5
+    },
+    {
+      "speaker": "customer",
+      "text": "That's for me and my brother, we are in Delhi.",
+      "start_s": 33.38,
+      "asr_ms": 356.3
+    },
+    {
+      "speaker": "agent",
+      "text": "Got it. Could you tell me the age of the older sibling?",
+      "start_s": 45.69,
+      "asr_ms": 249.3
+    },
+    {
+      "speaker": "customer",
+      "text": "Be fine.",
+      "start_s": 53.72,
+      "asr_ms": 300.0
+    },
+    {
+      "speaker": "agent",
+      "text": "Understood. Do you or your brother have any pre-existing health conditions?",
+      "start_s": 59.51,
+      "asr_ms": 351.0
+    },
+    {
+      "speaker": "customer",
+      "text": "What's the waiting period if I already have diabetes?",
+      "start_s": 69.01,
+      "asr_ms": 369.2
+    },
+    {
+      "speaker": "agent",
+      "text": "For diabetes, the waiting period can be up to 36 months before related treatment is covered. Shall I see what that means for your age and plan?",
+      "start_s": 84.46,
+      "asr_ms": 299.5
+    },
+    {
+      "speaker": "customer",
+      "text": "When is my next premium due?",
+      "start_s": 101.49,
+      "asr_ms": 266.4
+    },
+    {
+      "speaker": "agent",
+      "text": "A colleague will call you shortly to help with that.",
+      "start_s": 112.59,
+      "asr_ms": 298.0
+    },
+    {
+      "speaker": "customer",
+      "text": "Okay, thanks.",
+      "start_s": 118.57,
+      "asr_ms": 255.9
+    },
+    {
+      "speaker": "agent",
+      "text": "You're welcome. Have a great day.",
+      "start_s": 124.84,
+      "asr_ms": 349.0
+    }
+  ],
+  "nudges": [],
+  "suppressed": []
+}

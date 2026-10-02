@@ -1,0 +1,187 @@
+{
+  "call_id": "5ded02f305e8",
+  "label": "web_in_20261002_083222",
+  "model": "openai/gpt-oss-120b",
+  "language": "en",
+  "started_at": "2026-10-02T08:29:56.467193+00:00",
+  "summary": {
+    "call_id": "5ded02f305e8",
+    "started_at": "2026-10-02T08:29:56.467193+00:00",
+    "lead": {},
+    "handoff": null,
+    "callback": null,
+    "kb_searches": 0,
+    "grounded_answers": 0,
+    "refusals": 0,
+    "grounding_rate": null
+  },
+  "kb_searches": [],
+  "transcript": [
+    {
+      "role": "agent",
+      "text": "Hi, I'm Meera calling from Niva Bupa. Is now a good time to talk?",
+      "at": "2026-10-02T08:29:57.648284+00:00",
+      "tool_calls": [],
+      "timings_ms": {
+        "llm_0": 1175.1,
+        "turn_total": 1175.2
+      }
+    },
+    {
+      "role": "caller",
+      "text": "Yes, it's good.",
+      "at": "2026-10-02T08:30:08.400985+00:00",
+      "tool_calls": [],
+      "timings_ms": {}
+    },
+    {
+      "role": "agent",
+      "text": "Great, thank you. May I have your name, please?",
+      "at": "2026-10-02T08:30:09.731892+00:00",
+      "tool_calls": [],
+      "timings_ms": {
+        "llm_0": 1330.8,
+        "turn_total": 1330.8
+      }
+    },
+    {
+      "role": "caller",
+      "text": "xa",
+      "at": "2026-10-02T08:30:19.788351+00:00",
+      "tool_calls": [],
+      "timings_ms": {}
+    },
+    {
+      "role": "agent",
+      "text": "Thanks, Xa. Who are you looking to cover and how many members?",
+      "at": "2026-10-02T08:30:20.688186+00:00",
+      "tool_calls": [],
+      "timings_ms": {
+        "llm_0": 899.7,
+        "turn_total": 899.8
+      }
+    },
+    {
+      "role": "caller",
+      "text": "Me and my brother too.",
+      "at": "2026-10-02T08:30:32.362983+00:00",
+      "tool_calls": [],
+      "timings_ms": {}
+    },
+    {
+      "role": "agent",
+      "text": "Got it. What\u2019s the age of the older sibling?...............Could you tell me the age of the older sibling?...Thanks. Which city do you both live in?Do either of you have any pre-existing medical conditions?Do you currently have any health cover, like through an employer or another policy?",
+      "at": "2026-10-02T08:30:35.414612+00:00",
+      "tool_calls": [],
+      "timings_ms": {
+        "llm_0": 3051.5,
+        "turn_total": 3051.6
+      }
+    },
+    {
+      "role": "caller",
+      "text": "safety and no medical condition.",
+      "at": "2026-10-02T08:31:03.594174+00:00",
+      "tool_calls": [],
+      "timings_ms": {}
+    },
+    {
+      "role": "agent",
+      "text": "Which city do you and your brother live in?",
+      "at": "2026-10-02T08:31:04.576404+00:00",
+      "tool_calls": [],
+      "timings_ms": {
+        "llm_0": 982.1,
+        "turn_total": 982.2
+      }
+    },
+    {
+      "role": "caller",
+      "text": "Delhi",
+      "at": "2026-10-02T08:31:11.890892+00:00",
+      "tool_calls": [],
+      "timings_ms": {}
+    },
+    {
+      "role": "agent",
+      "text": "What\u2019s the age of the older brother?",
+      "at": "2026-10-02T08:31:12.660602+00:00",
+      "tool_calls": [],
+      "timings_ms": {
+        "llm_0": 769.5,
+        "turn_total": 769.6
+      }
+    },
+    {
+      "role": "caller",
+      "text": "35",
+      "at": "2026-10-02T08:31:18.954145+00:00",
+      "tool_calls": [],
+      "timings_ms": {}
+    },
+    {
+      "role": "agent",
+      "text": "Do you already have any health insurance, perhaps through an employer or another policy?",
+      "at": "2026-10-02T08:31:21.608043+00:00",
+      "tool_calls": [],
+      "timings_ms": {
+        "throttle_wait_0": 1984.0,
+        "llm_0": 669.4,
+        "turn_total": 2653.8
+      }
+    },
+    {
+      "role": "caller",
+      "text": "\uadf8\ub798\uc11c",
+      "at": "2026-10-02T08:31:32.258239+00:00",
+      "tool_calls": [],
+      "timings_ms": {}
+    },
+    {
+      "role": "agent",
+      "text": "Do you have a budget in mind for the health coverage?",
+      "at": "2026-10-02T08:31:37.033634+00:00",
+      "tool_calls": [],
+      "timings_ms": {
+        "throttle_wait_0": 3406.3,
+        "llm_0": 1368.7,
+        "turn_total": 4775.3
+      }
+    },
+    {
+      "role": "caller",
+      "text": "no",
+      "at": "2026-10-02T08:31:45.989316+00:00",
+      "tool_calls": [],
+      "timings_ms": {}
+    },
+    {
+      "role": "agent",
+      "text": "Are there any pre\u2011existing health conditions we should consider?",
+      "at": "2026-10-02T08:32:05.837488+00:00",
+      "tool_calls": [],
+      "timings_ms": {
+        "throttle_wait_0": 18837.0,
+        "llm_0": 1010.3,
+        "turn_total": 19848.1
+      }
+    },
+    {
+      "role": "caller",
+      "text": "diabetes.",
+      "at": "2026-10-02T08:32:15.378824+00:00",
+      "tool_calls": [],
+      "timings_ms": {}
+    },
+    {
+      "role": "agent",
+      "text": "Who\u2019s the health cover for, and how many people would you like to include?",
+      "at": "2026-10-02T08:32:16.298824+00:00",
+      "tool_calls": [],
+      "timings_ms": {
+        "llm_0": 919.9,
+        "turn_total": 919.9
+      }
+    }
+  ]
+}

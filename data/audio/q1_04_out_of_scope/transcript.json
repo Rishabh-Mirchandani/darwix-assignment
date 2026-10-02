@@ -1,0 +1,115 @@
+{
+  "label": "04_out_of_scope",
+  "market": "in",
+  "voices": {
+    "agent": "en-IN-NeerjaNeural",
+    "caller": "en-IN-PrabhatNeural"
+  },
+  "source_transcript": "04_out_of_scope__ccb221555e94.json",
+  "model": "qwen/qwen3.8-27b",
+  "summary": {
+    "call_id": "ccb221555e94",
+    "started_at": "2026-10-02T06:37:01.119155+00:00",
+    "lead": {},
+    "handoff": {
+      "reason": "account_specific",
+      "context": "Caller asked for next premium due date and policy number; account-specific details.",
+      "at": "2026-10-02T06:37:54.836331+00:00"
+    },
+    "callback": null,
+    "kb_searches": 0,
+    "grounded_answers": 0,
+    "refusals": 0,
+    "grounding_rate": null
+  },
+  "turns": [
+    {
+      "index": 0,
+      "file": "000_agent.mp3",
+      "speaker": "agent",
+      "voice": "en-IN-NeerjaNeural",
+      "text": "Hi, this is Meera calling from Niva Bupa. I'm reaching out about health cover for you or your family — is now a good time for a quick chat?",
+      "bytes": 63504
+    },
+    {
+      "index": 1,
+      "file": "001_caller.mp3",
+      "speaker": "caller",
+      "voice": "en-IN-PrabhatNeural",
+      "text": "Go ahead.",
+      "bytes": 11232
+    },
+    {
+      "index": 2,
+      "file": "002_agent.mp3",
+      "speaker": "agent",
+      "voice": "en-IN-NeerjaNeural",
+      "text": "Great. To point you in the right direction, who would you like cover for — just yourself, or your family too?",
+      "bytes": 53136
+    },
+    {
+      "index": 3,
+      "file": "003_caller.mp3",
+      "speaker": "caller",
+      "voice": "en-IN-PrabhatNeural",
+      "text": "Before anything else, when is my next premium due?",
+      "bytes": 25920
+    },
+    {
+      "index": 4,
+      "file": "004_agent.mp3",
+      "speaker": "agent",
+      "voice": "en-IN-NeerjaNeural",
+      "text": "I don't have access to your account or premium details on this line. Let me get a colleague who can pull that up — is this number okay to reach you on?",
+      "bytes": 64512
+    },
+    {
+      "index": 5,
+      "file": "005_caller.mp3",
+      "speaker": "caller",
+      "voice": "en-IN-PrabhatNeural",
+      "text": "Can you at least tell me my policy number then?",
+      "bytes": 23472
+    },
+    {
+      "index": 6,
+      "file": "006_agent.mp3",
+      "speaker": "agent",
+      "voice": "en-IN-NeerjaNeural",
+      "text": "A colleague will call you back shortly with those details — thanks for your patience.",
+      "bytes": 34992
+    },
+    {
+      "index": 7,
+      "file": "007_caller.mp3",
+      "speaker": "caller",
+      "voice": "en-IN-PrabhatNeural",
+      "text": "Fine. Do you also sell car insurance?",
+      "bytes": 26496
+    },
+    {
+      "index": 8,
+      "file": "008_agent.mp3",
+      "speaker": "agent",
+      "voice": "en-IN-NeerjaNeural",
+      "text": "I can only speak to Niva Bupa's health insurance on this call. For car cover, a colleague can point you the right way — would you like me to note that down?",
+      "bytes": 68112
+    },
+    {
+      "index": 9,
+      "file": "009_caller.mp3",
+      "speaker": "caller",
+      "voice": "en-IN-PrabhatNeural",
+      "text": "What was your company's profit last year?",
+      "bytes": 21024
+    },
+    {
+      "index": 10,
+      "file": "010_agent.mp3",
+      "speaker": "agent",
+      "voice": "en-IN-NeerjaNeural",
+      "text": "I don't have that information, and it's not something I can speak to on this line. Would you like me to connect you with someone who can?",
+      "bytes": 54864
+    }
+  ]
+}

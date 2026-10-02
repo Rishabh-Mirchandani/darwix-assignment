@@ -1,0 +1,187 @@
+{
+  "label": "01_cooperative",
+  "market": "in",
+  "voices": {
+    "agent": "en-IN-NeerjaNeural",
+    "caller": "en-IN-PrabhatNeural"
+  },
+  "source_transcript": "01_cooperative__d183a1be244a.json",
+  "model": "qwen/qwen3.8-27b",
+  "summary": {
+    "call_id": "d183a1be244a",
+    "started_at": "2026-10-02T06:29:05.915825+00:00",
+    "lead": {
+      "caller_name": "Unknown",
+      "city": "Pune",
+      "cover_for": "family",
+      "eldest_age": 62,
+      "existing_conditions": "Mother has high blood pressure",
+      "existing_cover": "None",
+      "members_count": 3
+    },
+    "handoff": {
+      "reason": "unanswered_question",
+      "context": "Caller asked about overseas hospitalization coverage, which I couldn't ground; wants details sent.",
+      "at": "2026-10-02T06:32:23.183338+00:00"
+    },
+    "callback": null,
+    "kb_searches": 2,
+    "grounded_answers": 1,
+    "refusals": 1,
+    "grounding_rate": 0.5
+  },
+  "turns": [
+    {
+      "index": 0,
+      "file": "000_agent.mp3",
+      "speaker": "agent",
+      "voice": "en-IN-NeerjaNeural",
+      "text": "Hi, this is Meera from Niva Bupa. I'm calling about health cover for you or your family — is now a good time for a quick chat?",
+      "bytes": 60048
+    },
+    {
+      "index": 1,
+      "file": "001_caller.mp3",
+      "speaker": "caller",
+      "voice": "en-IN-PrabhatNeural",
+      "text": "Yes, now is fine.",
+      "bytes": 15840
+    },
+    {
+      "index": 2,
+      "file": "002_agent.mp3",
+      "speaker": "agent",
+      "voice": "en-IN-NeerjaNeural",
+      "text": "Great. Who are you looking to get covered — just yourself, or your family too?",
+      "bytes": 42192
+    },
+    {
+      "index": 3,
+      "file": "003_caller.mp3",
+      "speaker": "caller",
+      "voice": "en-IN-PrabhatNeural",
+      "text": "It's for me and my wife, and my mother lives with us.",
+      "bytes": 29664
+    },
+    {
+      "index": 4,
+      "file": "004_agent.mp3",
+      "speaker": "agent",
+      "voice": "en-IN-NeerjaNeural",
+      "text": "So that's three of you. How old is the eldest among the three?",
+      "bytes": 33984
+    },
+    {
+      "index": 5,
+      "file": "005_caller.mp3",
+      "speaker": "caller",
+      "voice": "en-IN-PrabhatNeural",
+      "text": "My mother is the oldest, she's 62.",
+      "bytes": 23904
+    },
+    {
+      "index": 6,
+      "file": "006_agent.mp3",
+      "speaker": "agent",
+      "voice": "en-IN-NeerjaNeural",
+      "text": "Thanks. Which city are you all based in?",
+      "bytes": 26352
+    },
+    {
+      "index": 7,
+      "file": "007_caller.mp3",
+      "speaker": "caller",
+      "voice": "en-IN-PrabhatNeural",
+      "text": "We're in Pune.",
+      "bytes": 11808
+    },
+    {
+      "index": 8,
+      "file": "008_agent.mp3",
+      "speaker": "agent",
+      "voice": "en-IN-NeerjaNeural",
+      "text": "Got it, Pune. Does anyone in the family have any existing health conditions, like diabetes or a heart issue?",
+      "bytes": 54144
+    },
+    {
+      "index": 9,
+      "file": "009_caller.mp3",
+      "speaker": "caller",
+      "voice": "en-IN-PrabhatNeural",
+      "text": "She has high blood pressure, the rest of us are fine.",
+      "bytes": 27072
+    },
+    {
+      "index": 10,
+      "file": "010_agent.mp3",
+      "speaker": "agent",
+      "voice": "en-IN-NeerjaNeural",
+      "text": "Noted. Do you or your wife have any current health cover, maybe through a job?",
+      "bytes": 40608
+    },
+    {
+      "index": 11,
+      "file": "011_caller.mp3",
+      "speaker": "caller",
+      "voice": "en-IN-PrabhatNeural",
+      "text": "No, none of us have any cover at the moment.",
+      "bytes": 25488
+    },
+    {
+      "index": 12,
+      "file": "012_agent.mp3",
+      "speaker": "agent",
+      "voice": "en-IN-NeerjaNeural",
+      "text": "I've noted your details, and a Niva Bupa advisor will reach out shortly to discuss family plans that fit your mother's needs.",
+      "bytes": 52560
+    },
+    {
+      "index": 13,
+      "file": "013_caller.mp3",
+      "speaker": "caller",
+      "voice": "en-IN-PrabhatNeural",
+      "text": "What would the waiting period be for her blood pressure?",
+      "bytes": 24480
+    },
+    {
+      "index": 14,
+      "file": "014_agent.mp3",
+      "speaker": "agent",
+      "voice": "en-IN-NeerjaNeural",
+      "text": "For a pre-existing condition like high blood pressure, there's a waiting period of up to three years before related treatment is covered. Shall I have the advisor walk you through how that works for your mother's age?",
+      "bytes": 83952
+    },
+    {
+      "index": 15,
+      "file": "015_caller.mp3",
+      "speaker": "caller",
+      "voice": "en-IN-PrabhatNeural",
+      "text": "Okay that makes sense. What happens if we need to be admitted abroad?",
+      "bytes": 37728
+    },
+    {
+      "index": 16,
+      "file": "016_agent.mp3",
+      "speaker": "agent",
+      "voice": "en-IN-NeerjaNeural",
+      "text": "I don't have a clear answer on overseas hospitalization on this line. Let me get a colleague who can confirm that for you — is this number okay to reach you on?",
+      "bytes": 70272
+    },
+    {
+      "index": 17,
+      "file": "017_caller.mp3",
+      "speaker": "caller",
+      "voice": "en-IN-PrabhatNeural",
+      "text": "Alright, please go ahead and have someone send me the details.",
+      "bytes": 32112
+    },
+    {
+      "index": 18,
+      "file": "018_agent.mp3",
+      "speaker": "agent",
+      "voice": "en-IN-NeerjaNeural",
+      "text": "Done — a colleague will call you back with the details on overseas coverage. Thanks for your time, and take care.",
+      "bytes": 52272
+    }
+  ]
+}

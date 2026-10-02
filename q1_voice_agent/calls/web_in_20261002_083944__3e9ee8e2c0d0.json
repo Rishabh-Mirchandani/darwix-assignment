@@ -1,0 +1,181 @@
+{
+  "call_id": "3e9ee8e2c0d0",
+  "label": "web_in_20261002_083944",
+  "model": "openai/gpt-oss-120b",
+  "language": "en",
+  "started_at": "2026-10-02T08:37:31.690095+00:00",
+  "summary": {
+    "call_id": "3e9ee8e2c0d0",
+    "started_at": "2026-10-02T08:37:31.690095+00:00",
+    "lead": {},
+    "handoff": {
+      "reason": "account_specific",
+      "context": "Caller asked for next premium due date",
+      "at": "2026-10-02T08:39:10.495496+00:00"
+    },
+    "callback": null,
+    "kb_searches": 1,
+    "grounded_answers": 1,
+    "refusals": 0,
+    "grounding_rate": 1.0
+  },
+  "kb_searches": [
+    {
+      "query": "diabetes pre-existing condition waiting period Niva Bupa",
+      "grounded": true,
+      "confidence": 5.233739852905273,
+      "threshold": 1.2,
+      "citations": [
+        "https://www.nivabupa.com/health-insurance/family-health-insurance-plans.html",
+        "https://www.nivabupa.com/health-insurance/5-lakh-health-insurance-plan.html",
+        "https://www.nivabupa.com/health-insurance/25-lakh-health-insurance-plans.html",
+        "https://www.nivabupa.com/health-insurance/5-lakh-health-insurance-plan.html"
+      ],
+      "latency_ms": 2480.5
+    }
+  ],
+  "transcript": [
+    {
+      "role": "agent",
+      "text": "Hi, this is Meera calling from Niva Bupa. I'm reaching out to see if I can share some health\u2011insurance options\u2014 is now a good time to talk?",
+      "at": "2026-10-02T08:37:33.157884+00:00",
+      "tool_calls": [],
+      "timings_ms": {
+        "llm_0": 1433.7,
+        "turn_total": 1435.4
+      }
+    },
+    {
+      "role": "caller",
+      "text": "Yes, go ahead.",
+      "at": "2026-10-02T08:37:49.815730+00:00",
+      "tool_calls": [],
+      "timings_ms": {}
+    },
+    {
+      "role": "agent",
+      "text": "Great! Who are you looking to cover today and how many people would that be?",
+      "at": "2026-10-02T08:37:50.639995+00:00",
+      "tool_calls": [],
+      "timings_ms": {
+        "llm_0": 824.1,
+        "turn_total": 824.2
+      }
+    },
+    {
+      "role": "caller",
+      "text": "That's for me and my brother, we are in Delhi.",
+      "at": "2026-10-02T08:38:02.820933+00:00",
+      "tool_calls": [],
+      "timings_ms": {}
+    },
+    {
+      "role": "agent",
+      "text": "Got it. Could you tell me the age of the older sibling?",
+      "at": "2026-10-02T08:38:03.640032+00:00",
+      "tool_calls": [],
+      "timings_ms": {
+        "llm_0": 819.0,
+        "turn_total": 819.1
+      }
+    },
+    {
+      "role": "caller",
+      "text": "Be fine.",
+      "at": "2026-10-02T08:38:12.548354+00:00",
+      "tool_calls": [],
+      "timings_ms": {}
+    },
+    {
+      "role": "agent",
+      "text": "Understood. Do you or your brother have any pre\u2011existing health conditions?",
+      "at": "2026-10-02T08:38:13.452666+00:00",
+      "tool_calls": [],
+      "timings_ms": {
+        "llm_0": 904.2,
+        "turn_total": 904.3
+      }
+    },
+    {
+      "role": "caller",
+      "text": "What's the waiting period if I already have diabetes?",
+      "at": "2026-10-02T08:38:26.269641+00:00",
+      "tool_calls": [],
+      "timings_ms": {}
+    },
+    {
+      "role": "agent",
+      "text": "For diabetes, the waiting period can be up to thirty\u2011six months before related treatment is covered. Shall I see what that means for your age and plan?",
+      "at": "2026-10-02T08:38:51.767216+00:00",
+      "tool_calls": [
+        {
+          "tool": "search_knowledge_base",
+          "args": {
+            "category": "coverage_rule",
+            "query": "diabetes pre-existing condition waiting period Niva Bupa"
+          },
+          "grounded": true,
+          "confidence": null,
+          "latency_ms": 2480.6
+        }
+      ],
+      "timings_ms": {
+        "throttle_wait_0": 7136.6,
+        "llm_0": 958.9,
+        "tool_search_knowledge_base_0": 2480.6,
+        "throttle_wait_1": 14043.2,
+        "llm_1": 876.8,
+        "turn_total": 25497.5
+      }
+    },
+    {
+      "role": "caller",
+      "text": "When is my next premium due?",
+      "at": "2026-10-02T08:39:09.893212+00:00",
+      "tool_calls": [],
+      "timings_ms": {}
+    },
+    {
+      "role": "agent",
+      "text": "A colleague will call you shortly to help with that.",
+      "at": "2026-10-02T08:39:14.091614+00:00",
+      "tool_calls": [
+        {
+          "tool": "request_human_handoff",
+          "args": {
+            "context": "Caller asked for next premium due date",
+            "reason": "account_specific"
+          },
+          "grounded": null,
+          "confidence": null,
+          "latency_ms": 313.2
+        }
+      ],
+      "timings_ms": {
+        "llm_0": 602.1,
+        "tool_request_human_handoff_0": 313.2,
+        "throttle_wait_1": 2893.7,
+        "llm_1": 387.8,
+        "turn_total": 4198.3
+      }
+    },
+    {
+      "role": "caller",
+      "text": "Okay, thanks.",
+      "at": "2026-10-02T08:39:24.945265+00:00",
+      "tool_calls": [],
+      "timings_ms": {}
+    },
+    {
+      "role": "agent",
+      "text": "You're welcome! Have a great day.",
+      "at": "2026-10-02T08:39:35.543060+00:00",
+      "tool_calls": [],
+      "timings_ms": {
+        "throttle_wait_0": 9670.6,
+        "llm_0": 926.7,
+        "turn_total": 10597.7
+      }
+    }
+  ]
+}

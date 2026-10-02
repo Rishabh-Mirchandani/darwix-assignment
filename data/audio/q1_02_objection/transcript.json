@@ -1,0 +1,111 @@
+{
+  "label": "02_objection",
+  "market": "in",
+  "voices": {
+    "agent": "en-IN-NeerjaNeural",
+    "caller": "en-IN-PrabhatNeural"
+  },
+  "source_transcript": "02_objection__40a719e324b6.json",
+  "model": "qwen/qwen3.8-27b",
+  "summary": {
+    "call_id": "40a719e324b6",
+    "started_at": "2026-10-02T06:32:37.728306+00:00",
+    "lead": {},
+    "handoff": null,
+    "callback": null,
+    "kb_searches": 4,
+    "grounded_answers": 4,
+    "refusals": 0,
+    "grounding_rate": 1.0
+  },
+  "turns": [
+    {
+      "index": 0,
+      "file": "000_agent.mp3",
+      "speaker": "agent",
+      "voice": "en-IN-NeerjaNeural",
+      "text": "Hi, this is Meera from Niva Bupa. I'm calling about health insurance options for you — is now a good time for a quick chat?",
+      "bytes": 59040
+    },
+    {
+      "index": 1,
+      "file": "001_caller.mp3",
+      "speaker": "caller",
+      "voice": "en-IN-PrabhatNeural",
+      "text": "Yeah go on.",
+      "bytes": 11520
+    },
+    {
+      "index": 2,
+      "file": "002_agent.mp3",
+      "speaker": "agent",
+      "voice": "en-IN-NeerjaNeural",
+      "text": "Great. To point you in the right direction, who do you need cover for — just yourself, or your family too?",
+      "bytes": 53424
+    },
+    {
+      "index": 3,
+      "file": "003_caller.mp3",
+      "speaker": "caller",
+      "voice": "en-IN-PrabhatNeural",
+      "text": "Look, honestly, health insurance is far too expensive for what it is.",
+      "bytes": 36432
+    },
+    {
+      "index": 4,
+      "file": "004_agent.mp3",
+      "speaker": "agent",
+      "voice": "en-IN-NeerjaNeural",
+      "text": "That's fair. One way people keep costs down is a smaller base cover, say three lakh, with a top-up on top — it's more affordable than a big single plan.\n\nWho would you need cover for, just yourself or your family?",
+      "bytes": 98352
+    },
+    {
+      "index": 5,
+      "file": "005_caller.mp3",
+      "speaker": "caller",
+      "voice": "en-IN-PrabhatNeural",
+      "text": "I'm 34 and perfectly healthy, I've never been to a hospital in my life.",
+      "bytes": 39744
+    },
+    {
+      "index": 6,
+      "file": "006_agent.mp3",
+      "speaker": "agent",
+      "voice": "en-IN-NeerjaNeural",
+      "text": "Being young and healthy actually works in your favour — lower premiums and some plans even reward staying claim-free with bonuses.\n\nSo just yourself, or would you want to cover your family too?",
+      "bytes": 80352
+    },
+    {
+      "index": 7,
+      "file": "007_caller.mp3",
+      "speaker": "caller",
+      "voice": "en-IN-PrabhatNeural",
+      "text": "I also already get cover through my employer, so what's the point?",
+      "bytes": 30816
+    },
+    {
+      "index": 8,
+      "file": "008_agent.mp3",
+      "speaker": "agent",
+      "voice": "en-IN-NeerjaNeural",
+      "text": "The catch is employer cover usually has a smaller sum insured and ends the day you leave the job. Your own policy stays with you no matter where you work.\n\nDoes your employer cover just you, or your family too?",
+      "bytes": 91872
+    },
+    {
+      "index": 9,
+      "file": "009_caller.mp3",
+      "speaker": "caller",
+      "voice": "en-IN-PrabhatNeural",
+      "text": "Hmm. Alright, what would it actually cost me?",
+      "bytes": 23184
+    },
+    {
+      "index": 10,
+      "file": "010_agent.mp3",
+      "speaker": "agent",
+      "voice": "en-IN-NeerjaNeural",
+      "text": "Honestly, I can't quote you a final number — it depends on your city, cover amount and a few other things. As a rough guide, a fifty-lakh policy for someone your age can land somewhere between twenty and sixty thousand a year.\n\nI can get you a proper quote with a colleague — would that be useful?",
+      "bytes": 124272
+    }
+  ]
+}

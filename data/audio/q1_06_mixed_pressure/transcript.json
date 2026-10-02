@@ -1,0 +1,115 @@
+{
+  "label": "06_mixed_pressure",
+  "market": "in",
+  "voices": {
+    "agent": "en-IN-NeerjaNeural",
+    "caller": "en-IN-PrabhatNeural"
+  },
+  "source_transcript": "06_mixed_pressure__b29c156726ca.json",
+  "model": "qwen/qwen3.8-27b",
+  "summary": {
+    "call_id": "b29c156726ca",
+    "started_at": "2026-10-02T06:39:56.610798+00:00",
+    "lead": {},
+    "handoff": {
+      "reason": "caller_requested",
+      "context": "Caller explicitly asks to be put through to a human who knows IVF coverage details.",
+      "at": "2026-10-02T06:41:53.892830+00:00"
+    },
+    "callback": null,
+    "kb_searches": 1,
+    "grounded_answers": 0,
+    "refusals": 1,
+    "grounding_rate": 0.0
+  },
+  "turns": [
+    {
+      "index": 0,
+      "file": "000_agent.mp3",
+      "speaker": "agent",
+      "voice": "en-IN-NeerjaNeural",
+      "text": "Hi, this is Meera calling from Niva Bupa — I help families find the right health cover. Is now a good time for a quick chat?",
+      "bytes": 59184
+    },
+    {
+      "index": 1,
+      "file": "001_caller.mp3",
+      "speaker": "caller",
+      "voice": "en-IN-PrabhatNeural",
+      "text": "Yes fine.",
+      "bytes": 11232
+    },
+    {
+      "index": 2,
+      "file": "002_agent.mp3",
+      "speaker": "agent",
+      "voice": "en-IN-NeerjaNeural",
+      "text": "Great. Who are you looking to get covered — just yourself, or family too?",
+      "bytes": 41472
+    },
+    {
+      "index": 3,
+      "file": "003_caller.mp3",
+      "speaker": "caller",
+      "voice": "en-IN-PrabhatNeural",
+      "text": "Family of four, oldest is 48, we're in Chennai.",
+      "bytes": 30672
+    },
+    {
+      "index": 4,
+      "file": "004_agent.mp3",
+      "speaker": "agent",
+      "voice": "en-IN-NeerjaNeural",
+      "text": "Thanks — that covers a lot. Does anyone in the family have any existing health conditions, like diabetes or blood pressure?",
+      "bytes": 59328
+    },
+    {
+      "index": 5,
+      "file": "005_caller.mp3",
+      "speaker": "caller",
+      "voice": "en-IN-PrabhatNeural",
+      "text": "Does the policy cover IVF treatment after two failed cycles?",
+      "bytes": 28944
+    },
+    {
+      "index": 6,
+      "file": "006_agent.mp3",
+      "speaker": "agent",
+      "voice": "en-IN-NeerjaNeural",
+      "text": "I don't have a clear answer on IVF coverage after failed cycles. Let me get a colleague who can check that for you — is this number okay to call back?",
+      "bytes": 68256
+    },
+    {
+      "index": 7,
+      "file": "007_caller.mp3",
+      "speaker": "caller",
+      "voice": "en-IN-PrabhatNeural",
+      "text": "That's not good enough, I need an actual answer.",
+      "bytes": 28224
+    },
+    {
+      "index": 8,
+      "file": "008_agent.mp3",
+      "speaker": "agent",
+      "voice": "en-IN-NeerjaNeural",
+      "text": "I understand, and I'm sorry I can't give you that answer on this line. A colleague who can check the exact IVF terms will call you back shortly.",
+      "bytes": 65664
+    },
+    {
+      "index": 9,
+      "file": "009_caller.mp3",
+      "speaker": "caller",
+      "voice": "en-IN-PrabhatNeural",
+      "text": "Then put me through to someone who knows.",
+      "bytes": 20304
+    },
+    {
+      "index": 10,
+      "file": "010_agent.mp3",
+      "speaker": "agent",
+      "voice": "en-IN-NeerjaNeural",
+      "text": "Of course — I'm connecting you with a colleague who can walk you through the IVF coverage details.",
+      "bytes": 38880
+    }
+  ]
+}
